@@ -4,10 +4,13 @@ import './index.css';
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
 import MainPage from './components/HomePage/MainPage';
-
+import { Reset } from 'styled-reset'
 
 ReactDOM.render(
-  <MainPage />,
+  <>
+  <Reset />
+  <MainPage />
+  </>,
   document.getElementById('root')
 );
 

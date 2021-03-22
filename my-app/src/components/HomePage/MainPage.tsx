@@ -1,18 +1,29 @@
 import React, {FC} from 'react';
+
+import styled from 'styled-components'
+
 import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu'
 
 
+const Wrapper = styled.div`
+ 
+`;
+
+const Content = styled.div`
+max-width:1200px;
+display:flex;
+align-items:center;
+`;
 const MainPage: FC =() => {
     return (
-        <>
-        <TopBar />
-        <div>
-            <LeftMenu />
-            <div>content</div>
-
-        </div>
-        </>
+        <Wrapper>
+            <TopBar />
+            <Content>
+                <LeftMenu />
+                <div>content</div>
+            </Content>
+        </Wrapper>
     )
     
 }
