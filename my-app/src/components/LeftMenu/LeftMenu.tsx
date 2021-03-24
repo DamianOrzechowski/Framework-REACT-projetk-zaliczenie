@@ -1,5 +1,6 @@
 import { FC } from 'React';
 import styled from 'styled-components';
+//import img from '../../icons/administration.png'
 //Card
 const Card = styled.div`
 -webkit-border-radius: 10px;
@@ -48,21 +49,21 @@ export const LeftMenu: FC = () => {
     <LefttMenu>    
         <Card>
             <Profile>
-                <img src="../icons/administration.png" alt=""/>
+                <img src=""/>
                 <div>name</div>
                 <div>job title</div>
 
             </Profile>
             <YNetworkPublication>
                 <YNetwork>
-                    <img src="" alt=""/>
+                    <img src=""/>
                     <p>Your Network</p>
-                    <img src="" alt=""/>
+                    <img src=""/>
                 </YNetwork>
                 <YPublication>
-                    <img src="" alt=""/>
+                    <img src=""/>
                     <p>Your Network</p>
-                    <img src="" alt=""/>
+                    <img src=""/>
                 </YPublication>
 
             </YNetworkPublication>
@@ -70,15 +71,15 @@ export const LeftMenu: FC = () => {
         </Card>
         <PuEcEn>
             <El>
-                <img src="" alt=""/>
+                <img src=""/>
                 <p>Publications</p>
             </El>
-                <img src="" alt=""/>
+                <img src=""/>
                 <p>Ecosystem</p>
             <El>
             </El>
             <El>
-                <img src="" alt=""/>
+                <img src=""/>
                 <p>Entities</p>
             </El>
         </PuEcEn>
