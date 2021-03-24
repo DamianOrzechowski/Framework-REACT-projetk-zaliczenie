@@ -7,7 +7,9 @@ import { LeftMenu } from '../LeftMenu/LeftMenu'
 
 
 const Wrapper = styled.div`
- 
+ background:#e5e5e5;
+ font-family: 'Roboto', sans-serif;
+ height:100vh;
 `;
 
 const Content = styled.div`
