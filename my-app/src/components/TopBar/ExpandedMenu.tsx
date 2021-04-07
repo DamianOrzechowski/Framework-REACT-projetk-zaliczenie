@@ -1,8 +1,23 @@
 import { FC } from 'React'
- 
+import styled from 'styled-components';
+const Menu = styled.div`
+background-color: white;
+position:absolute;
+border: 1px solid black;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+padding: 10px;
+width: 200px; 
+margin-top:36px;
+`
+;
+
 export const ExpandedMenu: FC = () => {
     return(
-        <ul>
+        <Menu>
+            
+          <ul>
             <li><input type="text" placeholder='Filter...'/></li>
             <li>Platform</li>
             <li><img src="media/house2.svg"/><p>Home</p></li>
@@ -20,8 +35,9 @@ export const ExpandedMenu: FC = () => {
             <li><img src="media/house2.svg"/><p>name</p><p>See profile</p></li>
             <li><img src="media/house2.svg"/><p>Privacy</p></li>
             <li><img src="media/house2.svg"/><p>Settings</p></li>
-            <li><img src="media/house2.svg"/><p>Logout</p></li>
-        </ul>
+            <li><img src="media/house2.svg"/><p>Logout</p></li>  
+            </ul>
+        </Menu>
     );
 
 };

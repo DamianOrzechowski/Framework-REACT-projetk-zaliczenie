@@ -1,6 +1,8 @@
 import { FC } from 'React';
 import styled from 'styled-components';
-import img from '../../media/bell.svg'
+
+
+import {Link} from 'react-router-dom';
 //Card
 const Card = styled.div`
 -webkit-border-radius: 10px;
@@ -21,6 +23,13 @@ p{
 
 img{
     margin-top:20px;
+    width:90px;
+    height:90px;
+    border-radius: 50%;
+    
+    
+    
+    
 }
 
 background:white;
@@ -94,7 +103,7 @@ export const LeftMenu: FC = () => {
     <LefttMenu>    
         <Card>
             <Profile>
-                <img src="./media/bell.png"/>
+            <img src="./media/profileimg.jpg"/>
                 <p >name</p>
                 <p id="job">job title</p>
 
@@ -115,19 +124,30 @@ export const LeftMenu: FC = () => {
 
         </Card>
         <PuEcEn>
+            <Link to="/Test">
             <El>
                 <img src="media/publications.svg"/>
                 <p>Publications</p>
             </El>
+            </Link>
+            
+            <Link to="/">
             <El>
                 <img src="media/ecosystem.svg"/>
                 <p>Ecosystem</p>
-            
             </El>
+            </Link>
+            
+            
+            
+            <Link to="/Entities">
             <El>
                 <img src="media/entities2.svg"/>
                 <p>Entities</p>
             </El>
+            </Link>
+                
+            
         </PuEcEn>
     </LefttMenu>
     );

@@ -54,6 +54,7 @@ export const TopBar: FC = () => {
             <InnerWrapper>
                 <ExpandedMenuWrapper>
                 <img src="media/bell.svg"/>
+                </ExpandedMenuWrapper>
                 <Menu ref={wrapperRef}>
                 <img src="media/house2.svg" />
                 <p>Home</p>
@@ -66,7 +67,7 @@ export const TopBar: FC = () => {
                 }
                 </Menu>
 
-                </ExpandedMenuWrapper>
+                
                 <InputWrapper>
                 <input type="text" placeholder='Search Legalcluster'/>
                 <img src="" alt=""/>
