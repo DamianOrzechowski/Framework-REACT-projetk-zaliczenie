@@ -1,49 +1,11 @@
 import { FC } from 'React';
-import styled from 'styled-components';
-import { Wrapper } from'../../styledHelpers/Components'
-import useDropdown from 'react-dropdown-hook'
 
+import { Wrapper ,Menu,InnerWrapper,RightIcons,InputWrapper,ExpandedMenuWrapper } from'../../styledHelpers/Components';
+import useDropdown from 'react-dropdown-hook';
+import {Link} from 'react-router-dom';
 
-import { Colors } from '../../styledHelpers/Colors'
-import {ExpandedMenu} from '../TopBar/ExpandedMenu'
+import {ExpandedMenu} from '../TopBar/ExpandedMenu';
 
-
-const InnerWrapper = styled.div`
-//width:1200px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-width:100%;
-background: ${Colors.white};
-`;
-const RightIcons = styled.div`
-img{
-    
-    padding:8px;
-    margin-right:10px;
-    
-}
-#border{
-    background:#EDEDED;
-    border-radius: 25px 25px 25px 25px;
-    padding:8px;
-}
-`;
-const InputWrapper = styled.div`
-input{
-    
-    width:400px;
-}
-`;
-const ExpandedMenuWrapper = styled.div`
-background:white;
-img{
-    margin-left:5px;
-}
-`;
-const Menu = styled.div`
-display:flex;
-`;
 export const TopBar: FC = () => {
     const [wrapperRef, dropdownOpen, toggleDropdown]=useDropdown();
     return (
@@ -53,11 +15,17 @@ export const TopBar: FC = () => {
         <Wrapper>
             <InnerWrapper>
                 <ExpandedMenuWrapper>
-                <img src="media/bell.svg"/>
+                <Link to="/">
+                <img src="media/logo.png"/>
+                </Link>
                 </ExpandedMenuWrapper>
+
                 <Menu ref={wrapperRef}>
+                <Link to="/">
                 <img src="media/house2.svg" />
+                </Link>
                 <p>Home</p>
+                
                 <img onClick={toggleDropdown} src="media/arrow-down.svg" />
                 {dropdownOpen && 
                     
@@ -70,7 +38,7 @@ export const TopBar: FC = () => {
                 
                 <InputWrapper>
                 <input type="text" placeholder='Search Legalcluster'/>
-                <img src="" alt=""/>
+                <img src="media/search.svg"/>
                 </InputWrapper>
             
                 <RightIcons>

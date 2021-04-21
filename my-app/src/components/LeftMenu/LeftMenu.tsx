@@ -10,6 +10,7 @@ const Card = styled.div`
 border-radius: 10px;
 background: #FFFFFF;
 box-shadow: 0 4px 2px -2px gray;
+
 //width: 250px;
 
 padding: 5px;
@@ -46,7 +47,7 @@ margin-bottom:10px;
 background:white;
 display:flex;
 align-items:center;
-justify-content:space-around;
+justify-content:space-between;
 img{
 margin-right:8px;
 margin-left:8px;
@@ -86,11 +87,18 @@ margin-top:2px;
 img{
     margin-right:5px;
 }
+p{
+  
+color:black;
+text-decoration:underline #f1f1f1;
+
+}
 `
 //Menu
 const LefttMenu = styled.div`
-margin-left:10px;
-margin-top:10px;
+//margin-left:10px;
+//margin-top:10px;
+margin-right:10px;
 `
 
 
@@ -103,7 +111,7 @@ export const LeftMenu: FC = () => {
     <LefttMenu>    
         <Card>
             <Profile>
-            <img src="./media/profileimg.jpg"/>
+            <img src="./media/profile.jpg"/>
                 <p >name</p>
                 <p id="job">job title</p>
 
