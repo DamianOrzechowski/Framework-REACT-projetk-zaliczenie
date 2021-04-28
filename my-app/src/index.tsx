@@ -6,11 +6,14 @@ import './index.css';
 import MainPage from './components/HomePage/MainPage';
 import { Reset } from 'styled-reset'
 
+import { Provider } from 'react-redux';
+import store from './tools/store';
+
 ReactDOM.render(
-  <>
-  <Reset />
-  <MainPage />
-  </>,
+  <Provider store={store}>
+    <Reset />
+    <MainPage />
+  </Provider>,
   document.getElementById('root')
 );
 

@@ -1,72 +1,178 @@
-import { FC } from 'React'
+import { ChangeEvent, FC, useState } from 'react'
 import {ExpandedMenuUl,LiExpandedMenu, Account,Logout} from '../../styledHelpers/Components'
 import {Link} from 'react-router-dom';
 
+import { useSelector } from 'react-redux';
+import { IState } from '../../reducers';
+import { IUsersReducer } from '../../reducers/usersReducers';
+import { IPhotosReducer } from '../../reducers/photosReducers';
+
+
+
+
 
 export const ExpandedMenu: FC = () => {
+  
+    const { usersList } = useSelector<IState, IUsersReducer>(globalState => globalState.users);
+    const { photosList } = useSelector<IState, IPhotosReducer>(globalState => globalState.photos);
+
+  
+    /*function handleInputChange() {
+        let inputvalfilter = document.querySelector('.inputTopBarFilter');
+        console.log(inputvalfilter);
+     }*/
+
+
+
+
+    const [inputText,setInputText] = useState<string>('');
+
+     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+         const text = e.target.value;
+         setInputText(text)
+     }
+     //value={inputText} onChange={handleInputChange}
+     //{"Home".toLowerCase().includes(inputText.toLowerCase()) &&
+
+
     return(
         <ExpandedMenuUl>
+
+            
             
           <ul>
-            <li><input type="text" placeholder='Filter...'/></li>
+            <li><input type="text" value={inputText} onChange={handleInputChange}   className="inputTopBarFilter" placeholder='Filter...'/></li>
             <li id="group">Platform</li>
-            <Link to="/">
-            <LiExpandedMenu>
-            <li><img src="media/house2.svg"/><p>Home</p></li>
-            </LiExpandedMenu>
-            </Link>
+
+            {"Home".toLowerCase().includes(inputText.toLowerCase()) &&
+                <Link to="/">
+                <LiExpandedMenu>
+                <li><img src="media/house2.svg"/><p>Home</p></li>
+                </LiExpandedMenu>
+                </Link>
+            }
+
+            {"Publications".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
             <li><img src="media/publications.svg"/><p>Publications</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+
+            {"People".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
             <li><img src="media/people.svg"/><p>People</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+              
+            {"Entities".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
             <li><img src="media/entities2.svg"/><p>Entities</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+
+            {"Administration".toLowerCase().includes(inputText.toLowerCase()) &&   
             <Link to="/">
             <LiExpandedMenu>
             <li><img src="media/administration.svg"/><p>Administration</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+
+
             <li id="group">Workspaces</li>
+
+            {"client contract".toLowerCase().includes(inputText.toLowerCase()) && 
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/house2.svg"/><p>Client contract</p></li>
+            <li><img src="media/sticky-note-regular.svg"/><p>Client contract</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+
+            {"Supplier contract".toLowerCase().includes(inputText.toLowerCase()) && 
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/house2.svg"/><p>Supplier contract</p></li>
+            <li><img src="media/book-solid.svg"/><p>Supplier contract</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+
+            {"Corporate".toLowerCase().includes(inputText.toLowerCase()) && 
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/house2.svg"/><p>Corporate</p></li>
+            <li><img src="media/sticky-note-regular.svg"/><p>Corporate</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+                   
+            {"Group Norms".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/house2.svg"/><p>Group Norms</p></li>
+            <li><img src="media/sticky-note-regular.svg"/><p>Group Norms</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+
+            {"Real estate contracts".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
             <li><img src="media/house2.svg"/><p>Real estate contracts</p></li>
             </LiExpandedMenu>
             </Link>
+            }
+
+            {"Commercial contracts".toLowerCase().includes(inputText.toLowerCase()) &&
+            <Link to="/">
+            <LiExpandedMenu>
+            <li><img src="media/book-solid.svg"/><p>Commercial contracts</p></li>
+            </LiExpandedMenu>
+            </Link>
+            }
+
+            {"Shops".toLowerCase().includes(inputText.toLowerCase()) &&
+            <Link to="/">
+            <LiExpandedMenu>
+            <li><img src="media/arrow-down.svg"/><p>Shops</p></li>
+            </LiExpandedMenu>
+            </Link>
+            }
+
+            {"Business".toLowerCase().includes(inputText.toLowerCase()) &&
+            <Link to="/">
+            <LiExpandedMenu>
+            <li><img src="media/entities.svg"/><p>Business</p></li>
+            </LiExpandedMenu>
+            </Link>
+             }
+
+            {"Manager".toLowerCase().includes(inputText.toLowerCase()) &&
+            <Link to="/">
+            <LiExpandedMenu>
+            <li><img src="media/people.svg"/><p>Manager</p></li>
+            </LiExpandedMenu>
+            </Link>
+            }
+
+            {"Online".toLowerCase().includes(inputText.toLowerCase()) &&
+            <Link to="/">
+            <LiExpandedMenu>
+            <li><img src="media/sticky-note-regular.svg"/><p>Online</p></li>
+            </LiExpandedMenu>
+            </Link>
+            }
+
             <li id="group">Account</li>
             <Link to="/">
             <Account>
-            <li><img src="media/profile.jpg"/>
+            <li><img src={photosList[0]?.url}/>
             <div>
-            <p >name</p><p>See profile</p>
+            <p >{usersList?.[0]?.name}</p><p>See profile</p>
             </div>
             </li>
             </Account>

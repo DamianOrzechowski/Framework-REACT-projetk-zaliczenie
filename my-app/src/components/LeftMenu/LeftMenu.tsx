@@ -1,6 +1,11 @@
 import { FC } from 'React';
 import styled from 'styled-components';
 
+import { useSelector } from 'react-redux';
+import { IState } from '../../reducers';
+import { IUsersReducer } from '../../reducers/usersReducers';
+import { IPhotosReducer } from '../../reducers/photosReducers';
+
 
 import {Link} from 'react-router-dom';
 //Card
@@ -102,17 +107,21 @@ margin-right:10px;
 `
 
 
-
+//<img src="./media/profile.jpg"/>
 
 export const LeftMenu: FC = () => {
+
+    const { usersList } = useSelector<IState, IUsersReducer>(globalState => globalState.users);
+    const { photosList } = useSelector<IState, IPhotosReducer>(globalState => globalState.photos);
+
     return (
         
         //karta z zdjęciem po lewej
     <LefttMenu>    
         <Card>
             <Profile>
-            <img src="./media/profile.jpg"/>
-                <p >name</p>
+            <img src={photosList[0]?.url}/>
+                <p >{usersList?.[0]?.name}</p>
                 <p id="job">job title</p>
 
             </Profile>

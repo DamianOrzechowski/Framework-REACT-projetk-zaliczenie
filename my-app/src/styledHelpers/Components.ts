@@ -105,6 +105,9 @@ li{
 text-decoration:underline white;
         
     }
+    img{
+       width:20px;
+    }
 }
 
 #Settings{
