@@ -74,6 +74,7 @@ position:absolute;
 border: 1px solid #EDEDED;
 
 
+
 padding: 10px;
 width: 200px; 
 margin-top:38px;
@@ -148,6 +149,12 @@ p:last-child{
 
 }
 `;
+export const ScrollBar = styled.div`
+height:150px;
+overflow-y:scroll;
+overflow-x:hidden;
+`;
+
 export const Logout = styled.div`
 border-top:solid 2px #EDEDED;
 li{
@@ -218,7 +225,7 @@ display:flex;
     
     width:33%;
     height:275px;
-    background-image: url("media/dubai.jpg");
+    background-image: url("media/fakeApi.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -262,7 +269,8 @@ display:flex;
         
 }
 #imgleft{
-   img{ width:90px;}
+   img{ width:90px;
+   height:57px;}
    margin-right:10px;
    margin-top:5px;
    margin-bottom:5px;

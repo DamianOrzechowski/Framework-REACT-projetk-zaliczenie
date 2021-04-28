@@ -1,5 +1,5 @@
 import { ChangeEvent, FC, useState } from 'react'
-import {ExpandedMenuUl,LiExpandedMenu, Account,Logout} from '../../styledHelpers/Components'
+import {ExpandedMenuUl,LiExpandedMenu, Account,Logout ,ScrollBar} from '../../styledHelpers/Components'
 import {Link} from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
@@ -86,6 +86,7 @@ export const ExpandedMenu: FC = () => {
 
 
             <li id="group">Workspaces</li>
+            <ScrollBar>
 
             {"client contract".toLowerCase().includes(inputText.toLowerCase()) && 
             <Link to="/">
@@ -119,18 +120,18 @@ export const ExpandedMenu: FC = () => {
             </Link>
             }
 
-            {"Real estate contracts".toLowerCase().includes(inputText.toLowerCase()) &&
+            {"Estate contracts".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/house2.svg"/><p>Real estate contracts</p></li>
+            <li><img src="media/house2.svg"/><p>Estate contracts</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
-            {"Commercial contracts".toLowerCase().includes(inputText.toLowerCase()) &&
+            {"Commercial".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/book-solid.svg"/><p>Commercial contracts</p></li>
+            <li><img src="media/book-solid.svg"/><p>Commercial</p></li>
             </LiExpandedMenu>
             </Link>
             }
@@ -166,6 +167,7 @@ export const ExpandedMenu: FC = () => {
             </LiExpandedMenu>
             </Link>
             }
+            </ScrollBar>
 
             <li id="group">Account</li>
             <Link to="/">

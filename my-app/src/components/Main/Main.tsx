@@ -20,7 +20,7 @@ export const Main: FC =()=>{
            <LastesPublications>
                <div id='imgpub'>
                <p >Lorem ipsum dolor sit, ametlendus aliquam tempore explicabo quisquam eos eum, repudiandae ipsum iusto.</p>
-               <div id='dateimgpub'><p id='colorwhite'>7 jan. 2020</p><img src="./media/profile.jpg" /> <p id='colorwhite'>{usersList?.[1]?.name}</p></div>
+               <div id='dateimgpub'><p id='colorwhite'>7 jan. 2020</p><img src={photosList[1]?.url} /> <p id='colorwhite'>{usersList?.[1]?.name}</p></div>
                </div>
 
                <div id='lastespub'>
@@ -29,7 +29,7 @@ export const Main: FC =()=>{
 
                        <div id='publication' >
                            <div id='imgleft'>
-                               <img src="./media/conference.jpg"/>
+                               <img src={photosList[0]?.url}/>
                             </div>
                            <div id="rightside">
                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem et, labore nihil iusto aperiam dicta.</p>
@@ -43,7 +43,7 @@ export const Main: FC =()=>{
 
                        <div id='publication' >
                            <div id='imgleft'>
-                               <img src="./media/conference.jpg"/>
+                               <img src={photosList[5]?.url}/>
                             </div>
                            <div id="rightside">
                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem et, labore nihil iusto aperiam dicta.</p>
@@ -57,7 +57,7 @@ export const Main: FC =()=>{
 
                        <div id='publication' >
                            <div id='imgleft'>
-                               <img src="./media/conference.jpg"/>
+                               <img src={photosList[6]?.url}/>
                             </div>
                            <div id="rightside">
                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem et, labore nihil iusto aperiam dicta.</p>
