@@ -287,5 +287,11 @@ display:flex;
 `;
 //Main page
 export const Page = styled.div`
+h1{
+    font-size:20px;
+    margin-top:10px;
+    margin-left:10px;
+    color:#4c5262;
+}
 //border: 5px solid red;
 `;

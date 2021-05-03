@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {LastesPublications, Page} from'../../styledHelpers/Components';
 
+
 import { useSelector } from 'react-redux';
 import { IState } from '../../reducers';
 import { IUsersReducer } from '../../reducers/usersReducers';
 import { IPhotosReducer } from '../../reducers/photosReducers';
 
-import {Slider} from '../Main/Slider';
+import {SliderWorkspace} from './SliderWorkspace';
 
 export const Main: FC =()=>{
 
@@ -74,7 +75,13 @@ export const Main: FC =()=>{
                </div>
                
            </LastesPublications>
-           <Slider/>
+
+           <h1>Workspaces</h1>
+
+
+
+           <SliderWorkspace/>
+           
            
            
        
