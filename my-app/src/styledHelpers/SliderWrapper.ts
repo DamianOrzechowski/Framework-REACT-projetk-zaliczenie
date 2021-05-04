@@ -7,6 +7,8 @@ height: 200px;
 
 `;
 export const Wrapper = styled.div`
+    
+    text-decoration: underline white;
 
     height: 150px;
     display: flex;

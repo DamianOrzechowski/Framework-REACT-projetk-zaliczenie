@@ -1,4 +1,5 @@
 import {FC} from 'React';
+import {Link} from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -18,8 +19,10 @@ export const SliderWorkspace: FC =()=>{
          
            <Slider {...settings}>
 
+           <Link to="/Test">
            <Wrapper>
             <Tile>
+            
               <img className="background" src="media/contract2.jpg" />
               <div className="TileTitle">
                 <div className="TileImgSquare">
@@ -27,6 +30,7 @@ export const SliderWorkspace: FC =()=>{
                 </div>
                 <p className="Title">Client contract</p>
               </div>
+              
 
               <div className="TypeUsers">
               <img className="TypeUsersImg" src="media/sticky-note-regular.svg"/>
@@ -38,18 +42,21 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
            </Wrapper>
+           </Link>
+
+           <Link to="/Test">
            <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
               <div className="TileTitle">
                 <div className="TileImgSquare">
-                   <img className="TileImg" src="media/sticky-note-regular.svg"/>
+                   <img className="TileImg" src="media/book-solid.svg"/>
                 </div>
                 <p className="Title">Suppiler contract</p>
               </div>
 
               <div className="TypeUsers">
-              <img className="TypeUsersImg" src="media/sticky-note-regular.svg"/>
+              <img className="TypeUsersImg" src="media/book-solid.svg"/>
               <p className="TypeUsersText">Contract</p>
               <img className="TypeUsersImg" src="media/people.svg" />
               <p className="TypeUsersText">125 users</p>
@@ -58,6 +65,9 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+
+            <Link to="/Test">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -78,6 +88,10 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+            
+
+            <Link to="/Test">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -98,18 +112,21 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+
+            <Link to="/Test">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
               <div className="TileTitle">
                 <div className="TileImgSquare">
-                   <img className="TileImg" src="media/sticky-note-regular.svg"/>
+                   <img className="TileImg" src="media/house2.svg"/>
                 </div>
                 <p className="Title">Estate Contracts</p>
               </div>
 
               <div className="TypeUsers">
-              <img className="TypeUsersImg" src="media/sticky-note-regular.svg"/>
+              <img className="TypeUsersImg" src="media/house2.svg"/>
               <p className="TypeUsersText">Contract</p>
               <img className="TypeUsersImg" src="media/people.svg" />
               <p className="TypeUsersText">35 users</p>
@@ -118,6 +135,9 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+
+            <Link to="/Test">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -138,18 +158,21 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+
+            <Link to="/Test">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
               <div className="TileTitle">
                 <div className="TileImgSquare">
-                   <img className="TileImg" src="media/sticky-note-regular.svg"/>
+                   <img className="TileImg" src="media/arrow-down.svg"/>
                 </div>
                 <p className="Title">Shops</p>
               </div>
 
               <div className="TypeUsers">
-              <img className="TypeUsersImg" src="media/sticky-note-regular.svg"/>
+              <img className="TypeUsersImg" src="media/arrow-down.svg"/>
               <p className="TypeUsersText">Contract</p>
               <img className="TypeUsersImg" src="media/people.svg" />
               <p className="TypeUsersText">180 users</p>
@@ -158,18 +181,21 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+
+            <Link to="/Test">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
               <div className="TileTitle">
                 <div className="TileImgSquare">
-                   <img className="TileImg" src="media/sticky-note-regular.svg"/>
+                   <img className="TileImg" src="media/entities.svg"/>
                 </div>
                 <p className="Title">Buissnes</p>
               </div>
 
               <div className="TypeUsers">
-              <img className="TypeUsersImg" src="media/sticky-note-regular.svg"/>
+              <img className="TypeUsersImg" src="media/entities.svg"/>
               <p className="TypeUsersText">Contract</p>
               <img className="TypeUsersImg" src="media/people.svg" />
               <p className="TypeUsersText">120 users</p>
@@ -178,18 +204,21 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+
+            <Link to="/Test">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
               <div className="TileTitle">
                 <div className="TileImgSquare">
-                   <img className="TileImg" src="media/sticky-note-regular.svg"/>
+                   <img className="TileImg" src="media/book-solid.svg"/>
                 </div>
                 <p className="Title">Commercial</p>
               </div>
 
               <div className="TypeUsers">
-              <img className="TypeUsersImg" src="media/sticky-note-regular.svg"/>
+              <img className="TypeUsersImg" src="media/book-solid.svg"/>
               <p className="TypeUsersText">Contract</p>
               <img className="TypeUsersImg" src="media/people.svg" />
               <p className="TypeUsersText">150 users</p>
@@ -198,18 +227,21 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
+
+            <Link to="/">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
               <div className="TileTitle">
                 <div className="TileImgSquare">
-                   <img className="TileImg" src="media/sticky-note-regular.svg"/>
+                   <img className="TileImg" src="media/people.svg"/>
                 </div>
                 <p className="Title">Manager</p>
               </div>
 
               <div className="TypeUsers">
-              <img className="TypeUsersImg" src="media/sticky-note-regular.svg"/>
+              <img className="TypeUsersImg" src="media/people.svg"/>
               <p className="TypeUsersText">Contract</p>
               <img className="TypeUsersImg" src="media/people.svg" />
               <p className="TypeUsersText">140 users</p>
@@ -218,6 +250,7 @@ export const SliderWorkspace: FC =()=>{
               <p className="date">Lastes update 2 days</p>
             </Tile>
             </Wrapper>
+            </Link>
            
 
           </Slider>

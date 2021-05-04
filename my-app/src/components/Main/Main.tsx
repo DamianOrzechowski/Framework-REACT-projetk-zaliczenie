@@ -1,5 +1,4 @@
 import {FC} from 'react';
-import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {LastesPublications, Page} from'../../styledHelpers/Components';
 
@@ -8,19 +7,22 @@ import { useSelector } from 'react-redux';
 import { IState } from '../../reducers';
 import { IUsersReducer } from '../../reducers/usersReducers';
 import { IPhotosReducer } from '../../reducers/photosReducers';
+import { IPostsReducer } from '../../reducers/postsReducers';
 
 import {SliderWorkspace} from './SliderWorkspace';
+import {CommentsSection} from './CommentsSection';
 
 export const Main: FC =()=>{
 
     const { usersList } = useSelector<IState, IUsersReducer>(globalState => globalState.users);
     const { photosList } = useSelector<IState, IPhotosReducer>(globalState => globalState.photos);
+    const { postsList } = useSelector<IState, IPostsReducer>(globalState => globalState.posts);
 
    return(
        <Page>
            <LastesPublications>
                <div id='imgpub'>
-               <p >Lorem ipsum dolor sit, ametlendus aliquam tempore explicabo quisquam eos eum, repudiandae ipsum iusto.</p>
+               <p >{postsList?.[1]?.body}</p>
                <div id='dateimgpub'><p id='colorwhite'>7 jan. 2020</p><img src={photosList[1]?.url} /> <p id='colorwhite'>{usersList?.[1]?.name}</p></div>
                </div>
 
@@ -33,7 +35,7 @@ export const Main: FC =()=>{
                                <img src={photosList[0]?.url}/>
                             </div>
                            <div id="rightside">
-                               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem et, labore nihil iusto aperiam dicta.</p>
+                               <p id="post">{postsList?.[6]?.body}</p>
                                <div id='dateimg'>
                                    <p>7 jan. 2020</p>
                                    <img src={photosList[1]?.url} />
@@ -47,7 +49,7 @@ export const Main: FC =()=>{
                                <img src={photosList[5]?.url}/>
                             </div>
                            <div id="rightside">
-                               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem et, labore nihil iusto aperiam dicta.</p>
+                               <p id="post">{postsList?.[0]?.body}</p>
                                <div id='dateimg'>
                                    <p>7 jan. 2020</p>
                                    <img src={photosList[2]?.url} />
@@ -61,7 +63,7 @@ export const Main: FC =()=>{
                                <img src={photosList[6]?.url}/>
                             </div>
                            <div id="rightside">
-                               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem et, labore nihil iusto aperiam dicta.</p>
+                               <p id="post">{postsList?.[4]?.body}</p>
                                <div id='dateimg'>
                                    <p>7 jan. 2020</p>
                                    <img src={photosList[4]?.url} />
@@ -78,9 +80,12 @@ export const Main: FC =()=>{
 
            <h1>Workspaces</h1>
 
-
-
            <SliderWorkspace/>
+
+           <CommentsSection/>
+           
+           
+
            
            
            

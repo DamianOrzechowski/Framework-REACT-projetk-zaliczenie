@@ -279,11 +279,13 @@ display:flex;
     div{
     margin-top:5px;
      p {
-        font-size:10px;
+        font-size:7px;
         
     }}
 }
-
+#post{
+    font-size:10px;
+}
 `;
 //Main page
 export const Page = styled.div`

@@ -10,8 +10,6 @@ export const TopBar: FC = () => {
     const [wrapperRef, dropdownOpen, toggleDropdown]=useDropdown();
     return (
 
-    
-        
         <Wrapper>
             <InnerWrapper>
                 <ExpandedMenuWrapper>

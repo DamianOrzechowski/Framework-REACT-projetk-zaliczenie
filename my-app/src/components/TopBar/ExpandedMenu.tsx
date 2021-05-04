@@ -16,23 +16,11 @@ export const ExpandedMenu: FC = () => {
     const { usersList } = useSelector<IState, IUsersReducer>(globalState => globalState.users);
     const { photosList } = useSelector<IState, IPhotosReducer>(globalState => globalState.photos);
 
-  
-    /*function handleInputChange() {
-        let inputvalfilter = document.querySelector('.inputTopBarFilter');
-        console.log(inputvalfilter);
-     }*/
-
-
-
-
     const [inputText,setInputText] = useState<string>('');
-
      const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
          const text = e.target.value;
          setInputText(text)
      }
-     //value={inputText} onChange={handleInputChange}
-     //{"Home".toLowerCase().includes(inputText.toLowerCase()) &&
 
 
     return(

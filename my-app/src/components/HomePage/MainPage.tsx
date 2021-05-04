@@ -13,13 +13,17 @@ import{Test} from'../Test/Test'
 import { useDispatch } from 'react-redux';
 import { getUsers } from '../../actions/usersActions';
 import { getPhotos } from '../../actions/photoActions';
+import { getComments } from '../../actions/commentActions';
+import { getPosts } from '../../actions/postActions';
 type GetUsers = ReturnType<typeof getUsers>
 type GetPhotos = ReturnType<typeof getPhotos>
+type GetComments = ReturnType<typeof getComments>
+type GetPosts = ReturnType<typeof getPosts>
 
 const Wrapper = styled.div`
  background:#f1f1f1;
  font-family: 'Roboto', sans-serif;
- height:100vh;
+ //height:100vh;
 
 `;
 
@@ -37,6 +41,8 @@ const MainPage: FC =() => {
     useEffect(() => {
       dispatch<GetUsers>(getUsers());
       dispatch<GetPhotos>(getPhotos());
+      dispatch<GetComments>(getComments());
+      dispatch<GetPosts>(getPosts());
     }, []);
     
     return (
