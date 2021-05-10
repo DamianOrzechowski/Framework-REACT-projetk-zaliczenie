@@ -8,7 +8,8 @@ import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
 import{Entities} from '../Entities/Entities';
 import{Main} from'../Main/Main';
-import{Test} from'../Test/Test'
+import{Test} from'../Test/Test';
+import{Profile} from '../Profile/Profile';
 
 import { useDispatch } from 'react-redux';
 import { getUsers } from '../../actions/usersActions';
@@ -59,6 +60,11 @@ const MainPage: FC =() => {
                 <Route path="/Entities">
                 <Entities />
                 </Route>
+                <Route path="/Profile">
+                <Profile />
+                </Route>
+                
+
                 <Route path="/">
                     <Main/>
                 </Route>

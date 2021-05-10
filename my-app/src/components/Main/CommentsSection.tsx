@@ -28,7 +28,6 @@ export const CommentsSection: FC =()=>{
                         {dropdownOpen && 
                             <ul className='list'>
                                 <li>my posts</li>
-                                <li>all posts</li>
                             </ul>
                         }
 

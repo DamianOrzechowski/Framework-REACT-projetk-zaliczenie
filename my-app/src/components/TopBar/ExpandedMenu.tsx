@@ -158,7 +158,7 @@ export const ExpandedMenu: FC = () => {
             </ScrollBar>
 
             <li id="group">Account</li>
-            <Link to="/">
+            <Link to="/Profile">
             <Account>
             <li><img src={photosList[0]?.url}/>
             <div>
