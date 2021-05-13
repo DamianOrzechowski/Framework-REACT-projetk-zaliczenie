@@ -1,7 +1,12 @@
-import {FC} from 'React';
+import {FC} from 'react';
+
 
 export const Test: FC =()=>{
+  
+   
    return(
-       <h2>Test strona w budowie</h2>
+    <div>
+   test
+  </div>
    );
 };

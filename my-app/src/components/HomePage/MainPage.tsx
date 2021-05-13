@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 //router
 import styled from 'styled-components'
 
+
 import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
 import{Entities} from '../Entities/Entities';
@@ -37,6 +38,7 @@ justify-content:center;
 
 const MainPage: FC =() => {
     
+    
     const dispatch = useDispatch();
   
     useEffect(() => {
@@ -49,7 +51,9 @@ const MainPage: FC =() => {
     return (
         <Router>
         <Wrapper>
-            <TopBar />
+       
+            <TopBar
+             />
             <Content>
                 <LeftMenu />
                  <Switch>
