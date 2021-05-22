@@ -52,7 +52,7 @@ align-items:center;
     }
 }
 .namecity{
-    
+    div{
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -61,11 +61,14 @@ align-items:center;
         margin-bottom:5px;
        
     }
+    p{margin-top:8px;
+        margin-bottom:8px;}}
 }
 .leftside{
     display:flex;
 }
 .rightside{
+    
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -77,9 +80,11 @@ align-items:center;
         margin-top:10px;
         margin-right:10px;
     }
+
     .rightbot{
+        div{
         display:flex;
-        
+        justify-content: center;
         
         flex-direction:column;
         margin-right:10px;
@@ -87,6 +92,12 @@ align-items:center;
         input{
             margin-top:10px;
         }
+        p{
+            
+            margin-bottom:8px;
+            text-align: center;
+        }
+    }
     }
 }
 
