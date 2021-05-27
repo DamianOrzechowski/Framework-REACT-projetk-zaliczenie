@@ -5,7 +5,7 @@ width: 785px;
 background-color:white;
 border-radius:10px;
 margin-bottom: 10px;;
-height: 700px;
+min-height: 100vh;
 
 .TopNav{
     margin-top: 20px;
@@ -43,11 +43,25 @@ height: 700px;
             p{
                 color: gray;
             }
-            
-
-
             background-color: #EDEDED;
             
+        }
+        .MosaicDifferent{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border:solid 1px #EDEDED;
+            background-color: white;
+            
+            img{
+                margin-right: 5px;
+            }
+            p{
+                color: gray;
+            }
+
         }
         .Line{
             display: flex;
@@ -58,7 +72,20 @@ height: 700px;
             border-right: solid 1px #EDEDED;
             border-bottom: solid 1px #EDEDED;
             border-top: solid 1px #EDEDED;
+            background-color:#EDEDED ;
             
+        }
+        .LineDifferent{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-right: solid 1px #EDEDED;
+            border-bottom: solid 1px #EDEDED;
+            border-top: solid 1px #EDEDED;
+            
+
         }
 
     }
@@ -67,6 +94,7 @@ height: 700px;
 .BottomNav{
     margin-top: 10px;
     margin-left: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,10 +184,86 @@ input{
     display: flex;
     border-left: 1px gray solid;
     align-items: center;
+    
     p{
         color: gray;
         margin: 0px 5px;
     }
     
+}
+
+.Box{margin-left: 20px;
+margin-right: 20px;
+width: 700px;
+//height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);}
+
+.company{
+    display: flex;
+    align-items: center;
+    margin:5px;
+    border: solid 1px #ededed;
+    border-radius: 10px;
+    width: 200px;
+    
+    img{
+        width: 50px;
+        height: 50px;
+        margin:10px;
+        
+    }
+    .textspace{
+        p{
+            font-size: 10px;
+            color: #92a2b7;
+        }
+        h2{
+            color:#232c47;
+            margin-bottom: 5px;
+        }
+
+    }
+    
+}
+
+}
+.BoxDifferent{margin-left: 20px;
+margin-right: 20px;
+width: 700px;
+//height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);}
+
+.company{
+    display: flex;
+    align-items: center;
+    margin:5px;
+    border: solid 1px #ededed;
+    border-radius: 10px;
+    width: 200px;
+    
+    img{
+        width: 50px;
+        height: 50px;
+        margin:10px;
+        
+    }
+    .textspace{
+        p{
+            font-size: 10px;
+            color: #92a2b7;
+        }
+        h2{
+            color:#232c47;
+            margin-bottom: 5px;
+        }
+
+    }
+    
+}
+
 }
 `;
