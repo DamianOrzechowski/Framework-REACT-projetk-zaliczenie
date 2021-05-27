@@ -1,0 +1,165 @@
+import styled from 'styled-components'
+
+export const Page = styled.div`
+width: 785px;
+background-color:white;
+border-radius:10px;
+margin-bottom: 10px;;
+height: 700px;
+
+.TopNav{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 20px;
+
+    }
+    .LeftTopNav{
+        display: flex;
+        align-items: center;
+        p{
+            margin-right: 5px;
+            color: gray;
+            font-size: 20px;
+        }
+    }
+    .RightTopNav{
+        display: flex;
+        margin-right: 20px;
+        
+        .Mosaic{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border:solid 1px #EDEDED;
+            
+            img{
+                margin-right: 5px;
+            }
+            p{
+                color: gray;
+            }
+            
+
+
+            background-color: #EDEDED;
+            
+        }
+        .Line{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-right: solid 1px #EDEDED;
+            border-bottom: solid 1px #EDEDED;
+            border-top: solid 1px #EDEDED;
+            
+        }
+
+    }
+}
+
+.BottomNav{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 15px;
+    }
+    .LeftBottomNav{
+        display: flex;
+        align-items: center;
+        div{
+            display: flex;
+            align-items: center;
+        }
+        .ExpandedMenu{
+            background-color: #EDEDED;
+            padding: 5px;
+            border-radius: 10px;
+            img{
+                margin:5px;
+            }
+        }
+        .More{
+            padding: 0px 5px;
+            border-right: gray 1px solid;
+            height: 30px;
+        }
+        .Sort{
+            img{
+                margin-left: 5px;
+                margin-right: 2px;
+            }
+            p{
+                color: gray;
+                margin-right: 5px;
+            }
+        }
+        .Filter{
+            height: 30px;
+            border-right: gray 1px solid;
+            img{
+                margin-right: 2px;
+            }
+            p{
+            margin-right: 5px;
+            color: gray;
+            }
+        }
+        .Full-Screen{
+            height: 30px;
+            border-right: gray 1px solid;
+            img{
+            margin: 0px 5px;
+            }
+        }
+        .Share{
+            margin-left: 5px;
+            img{
+                margin-right: 2px;
+            }
+            p{
+                color: gray;
+            }
+        }
+
+    }
+}
+.RightBottomNav{
+    display: flex;
+    .inputsection{
+    background-color:white;
+    display:flex;
+border: solid 1px #EDEDED;
+border-radius:5px;
+padding: 5px 5px;
+margin-right: 20px;
+img{
+    width:15px;
+}
+input{
+    border: none;
+    width:100px;
+}}
+}
+.Followed{
+    padding: 0px 20px;
+    
+    display: flex;
+    border-left: 1px gray solid;
+    align-items: center;
+    p{
+        color: gray;
+        margin: 0px 5px;
+    }
+    
+}
+`;

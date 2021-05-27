@@ -1,5 +1,6 @@
-import {useState, FC, Component} from 'react';
+import {useState, FC, useEffect} from 'react';
 import React from 'react';
+
 
 
 
@@ -27,19 +28,101 @@ export const Test: FC =()=>{
       }
 
    }
+   function kopiuj(){
+      navigator.clipboard.writeText('http://localhost:3000/Entities')
+
+   }
 
   // ()=>{showEdit(isEdit == false? isEdit=true:isEdit=false)}
+  /*const sortbyname = (tablica){
+
+  }*/
+  
+
+  
 
 
 
+
+
+
+
+  
+  const [data, setData] = useState([{name:'Zenek',color:'red'},{name:'Katarzyna',color:'blue'},{name:'Aneta',color:'orange'}]);
+  const [spr, setSpr] = useState(true)
+  //console.log(data)
+
+  //const [data, setData] = useState([{name:'Zenek'},{name:'Katarzyna'},{name:'Aneta'}]);
+
+//let spr:boolean = true;
+function zmiana(){
+   if(spr===true){
+   //alfabetyczne
+   //console.log(listaosob.sort((a,b) => 0 - (a > b ? -1 : 1)));
+   setSpr(false)
+   setData(data.sort((a,b) => 0 - (a > b ? -1 : 1)))
+   console.log(data)
+   
+console.log(spr)}
+   
+
+   else{
+      setSpr(true)
+      //nie alfabetyczne
+      //console.log(listaosob.sort((a,b) => 0 - (a > b ? 1 : -1)));
+      setData(data.sort((a,b) => 0 - (a > b ? 1 : -1)))
+      console.log(data)
+      
+      console.log(spr)
+   }
+   
+      
+  
+}
+//console.log(listaosob.sort())
 
    return(
     <div >
+       <button onClick={zmiana}>zmiana na alfabetycznie</button>
+       {spr ===true?(
+          <div>
+               {data.map(lista =>(
+                <p style={{color: lista.color}}>{lista.name}</p>
+               
+             ))}
+
+          </div>
+
+       ):(
+          <div>
+             
+             {data.map(lista =>(
+                <p style={{color: lista.color}}>{lista.name}</p>
+             ))}
+             
+             
+          </div>
+
+       )}
+       
+       
+
+
+
+
+
+
+
+
+
+
+
+
    <p onClick={addcos}> liczba{counter}</p>
    <p onClick={addletter}> {letters}</p>
    <input type="date" />
    <br />
-   <button onClick={Edytuj}>zmień </button>
+   <button onClick={kopiuj}>zmień </button>
 
    
    
@@ -59,4 +142,6 @@ export const Test: FC =()=>{
 
   </div>
    );
+
+
 };

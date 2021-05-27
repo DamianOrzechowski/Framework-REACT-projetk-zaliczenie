@@ -45,6 +45,23 @@ export const Section2: FC =()=>{
     let [propfirm3, setPropFirm3] = useState('KFC');
     let [propfirm2, setPropFirm2] = useState('ZARA');
     let [propfirm1, setPropFirm1] = useState('Amrit');
+    //tabel Internal
+    let [intname1, setIntName1] = useState('dolor sit');
+    let [intname2, setIntName2] = useState('amconsectetur');
+    let [intname3, setIntName3] = useState('adipisicing elit');
+    let [intentity1, setIntEntity1] = useState('Lorem');
+    let [intentity2, setIntEntity2] = useState('quaerat');
+    let [intentity3, setIntEntity3] = useState('temporibus');
+    let [intlocation1, setIntLocation1] = useState('France');
+    let [intlocation2, setIntLocation2] = useState('Poland');
+    let [intlocation3, setIntLocation3] = useState('Germany');
+    let [intexp1, setIntExp1] = useState('aporrot');
+    let [intexp2, setIntExp2] = useState('molestias');
+    let [intexp3, setIntExp3] = useState('corporis');
+    let [intdate1, setIntDate1] = useState('2021-05-06');
+    let [intdate2, setIntDate2] = useState('2021-04-07');
+    let [intdate3, setIntDate3] = useState('2021-07-08');
+
     //Amount of fees
     let [amyear1, setAmYear1] = useState('2019');
     let [amyear2, setAmYear2] = useState('2018');
@@ -414,34 +431,34 @@ export const Section2: FC =()=>{
 
                 <div className='columnfirst'>
                     <h3>Name</h3>
-                    <p>{propname1}</p>
-                    <p>{propname2}</p>
-                    <p>{propname3}</p>
+                    <p>{intname1}</p>
+                    <p>{intname2}</p>
+                    <p>{intname3}</p>
                 </div>
 
                 <div className='column'>
                     <h3>Entity</h3>
-                    <p>{propentity1}</p>
-                    <p>{propentity2}</p>
-                    <p>{propentity3}</p>
+                    <p>{intentity1}</p>
+                    <p>{intentity2}</p>
+                    <p>{intentity3}</p>
                 </div>
                 <div className='column'>
                     <h3>Location</h3>
-                    <p>{proplocation1}</p>
-                    <p>{proplocation2}</p>
-                    <p>{proplocation3}</p>
+                    <p>{intlocation1}</p>
+                    <p>{intlocation2}</p>
+                    <p>{intlocation3}</p>
                 </div>
                 <div className='column'>
                     <h3>Expertise</h3>
-                    <p>{propexp1}</p>
-                    <p>{propexp2}</p>
-                    <p>{propexp3}</p>
+                    <p>{intexp1}</p>
+                    <p>{intexp2}</p>
+                    <p>{intexp3}</p>
                 </div>
                 <div className='column'>
                     <h3>Date</h3>
-                    <p>{propdate1}</p>
-                    <p>{propdate2}</p>
-                    <p>{propdate3}</p>
+                    <p>{intdate1}</p>
+                    <p>{intdate2}</p>
+                    <p>{intdate3}</p>
                 </div>
                 
             </div>
@@ -451,37 +468,37 @@ export const Section2: FC =()=>{
 
                 <div className='columnfirst'>
                     <h3>Name</h3>
-                    <input type="text" value={propname1} onChange={event =>setPropName1(event.target.value)}/>
-                    <input type="text" value={propname2} onChange={event =>setPropName2(event.target.value)}/>
-                    <input type="text" value={propname3} onChange={event =>setPropName3(event.target.value)}/>
+                    <input type="text" value={intname1} onChange={event =>setIntName1(event.target.value)}/>
+                    <input type="text" value={intname2} onChange={event =>setIntName2(event.target.value)}/>
+                    <input type="text" value={intname3} onChange={event =>setIntName3(event.target.value)}/>
                 </div>
 
                 <div className='column'>
                     <h3>Entity</h3>
-                    <input type="text" value={propentity1} onChange={event =>setPropEntity1(event.target.value)}/>
-                    <input type="text" value={propentity2} onChange={event =>setPropEntity2(event.target.value)}/>
-                    <input type="text" value={propentity3} onChange={event =>setPropEntity3(event.target.value)}/>
+                    <input type="text" value={intentity1} onChange={event =>setIntEntity1(event.target.value)}/>
+                    <input type="text" value={intentity2} onChange={event =>setIntEntity2(event.target.value)}/>
+                    <input type="text" value={intentity3} onChange={event =>setIntEntity3(event.target.value)}/>
                 </div>
 
                 <div className='column'>
                     <h3>Location</h3>
-                    <input type="text" value={proplocation1} onChange={event =>setPropLocation1(event.target.value)}/>
-                    <input type="text" value={proplocation2} onChange={event =>setPropLocation2(event.target.value)}/>
-                    <input type="text" value={proplocation3} onChange={event =>setPropLocation3(event.target.value)}/>
+                    <input type="text" value={intlocation1} onChange={event =>setIntLocation1(event.target.value)}/>
+                    <input type="text" value={intlocation2} onChange={event =>setIntLocation2(event.target.value)}/>
+                    <input type="text" value={intlocation3} onChange={event =>setIntLocation3(event.target.value)}/>
                 </div>
 
                 <div className='column'>
                     <h3>Expertise</h3>
-                    <input type="text" value={propexp1} onChange={event =>setPropExp1(event.target.value)}/>
-                    <input type="text" value={propexp2} onChange={event =>setPropExp2(event.target.value)}/>
-                    <input type="text" value={propexp3} onChange={event =>setPropExp3(event.target.value)}/>
+                    <input type="text" value={intexp1} onChange={event =>setIntExp1(event.target.value)}/>
+                    <input type="text" value={intexp2} onChange={event =>setIntExp2(event.target.value)}/>
+                    <input type="text" value={intexp3} onChange={event =>setIntExp3(event.target.value)}/>
                 </div>
 
                 <div className='column'>
                     <h3>Date</h3>
-                    <input type="date" className='propinputdate' value={propdate1} onChange={event =>setPropDate1(event.target.value)}/>
-                    <input type="date" className='propinputdate' value={propdate2} onChange={event =>setPropDate2(event.target.value)}/>
-                    <input type="date" className='propinputdate' value={propdate3} onChange={event =>setPropDate3(event.target.value)}/>
+                    <input type="date" className='propinputdate' value={intdate1} onChange={event =>setIntDate1(event.target.value)}/>
+                    <input type="date" className='propinputdate' value={intdate2} onChange={event =>setIntDate2(event.target.value)}/>
+                    <input type="date" className='propinputdate' value={intdate3} onChange={event =>setIntDate3(event.target.value)}/>
                 </div>
 
                
@@ -571,11 +588,11 @@ export const Section2: FC =()=>{
 
                 <div className='column'>
                     <h3>Law firm</h3>
-                    <input type="text" value={propexp1} onChange={event =>setPropExp1(event.target.value)}/>
-                    <input type="text" value={propexp2} onChange={event =>setPropExp2(event.target.value)}/>
-                    <input type="text" value={propexp3} onChange={event =>setPropExp3(event.target.value)}/>
-                    <input type="text" value={propexp2} onChange={event =>setPropExp2(event.target.value)}/>
-                    <input type="text" value={propexp3} onChange={event =>setPropExp3(event.target.value)}/>
+                    <input type="text" value={amlaw1} onChange={event =>setAmLaw1(event.target.value)}/>
+                    <input type="text" value={amlaw2} onChange={event =>setAmLaw2(event.target.value)}/>
+                    <input type="text" value={amlaw3} onChange={event =>setAmLaw3(event.target.value)}/>
+                    <input type="text" value={amlaw4} onChange={event =>setAmLaw4(event.target.value)}/>
+                    <input type="text" value={amlaw5} onChange={event =>setAmLaw5(event.target.value)}/>
                 </div>
 
                 
