@@ -1,11 +1,31 @@
-import {FC} from 'react';
-import {Link} from 'react-router-dom';
+import {FC, useState} from 'react';
 import useDropdown from 'react-dropdown-hook';
 
-import {Wrapper , TopSection} from '../../styledHelpers/CommentsSectionStyle'
+import {Wrapper , TopSection ,Comments} from '../../styledHelpers/CommentsSectionStyle'
+
+import { useSelector } from 'react-redux';
+import { IState } from '../../reducers';
+import { ICommentsReducer } from '../../reducers/commentsReducers';
 
 export const CommentsSection: FC =()=>{
     const [wrapperRef, dropdownOpen, toggleDropdown]=useDropdown();
+
+    const { commentsList } = useSelector<IState, ICommentsReducer>(globalState => globalState.comments);
+    let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body}])
+    //setCommentsTable([])
+
+    for (let index = 1; index < commentsList.length; index++) {
+        if(commentsTable.length < 500){
+        let commentname:string = commentsList?.[index]?.name;
+        let commentbody:string = commentsList?.[index]?.body;
+        commentsTable.push({name:commentname,body:commentbody})
+        }
+        //if(index ===499){setCommentsTable(commentsTable)}
+        //setCommentsTable(commentsTable) 
+    }
+    console.log(commentsTable)
+    const [searchTerm,setSerachTerm] = useState('')
+
     return(
         <Wrapper>
             <TopSection>
@@ -15,7 +35,7 @@ export const CommentsSection: FC =()=>{
 
                     <div className='inputsection'>
 
-                        <input type="text" placeholder='Filter by title...'/>
+                        <input type="text" placeholder='Filter by title...' onChange={event =>{setSerachTerm(event.target.value)}}/>
                         <img src="media/search.svg"/>
 
                     </div>
@@ -35,6 +55,25 @@ export const CommentsSection: FC =()=>{
 
                 </div>
             </TopSection>
+            <Comments>
+
+
+                {commentsTable.filter((val)=>{
+                  if(searchTerm==''){
+                      return val;
+                  }else if(val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                      return val;
+
+                  };
+              }).map(comment=>(
+                    <div>
+                        <p className='name'>{comment.name}</p>
+                        <p className='body'>{comment.body}</p>
+                    </div>
+                ))}
+
+
+            </Comments>
 
         </Wrapper>
     );

@@ -69,3 +69,12 @@ input{
 
 
 `;
+export const Comments = styled.div`
+.name{
+    background-color: aqua;
+}
+.body{
+    background-color: aquamarine;
+}
+
+`;

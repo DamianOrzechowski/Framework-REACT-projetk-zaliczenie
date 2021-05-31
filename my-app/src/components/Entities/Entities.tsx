@@ -58,6 +58,7 @@ export const Entities: FC =()=>{
     
    return(
        <Page>
+        <div className={fullscreen === true?(''):('fullscreen')}> 
            <div className='TopNav'>
                <div className='LeftTopNav'>
                    <p>Entities</p>
@@ -159,7 +160,7 @@ export const Entities: FC =()=>{
 
 
 
-
+           </div>  
        </Page>
 
    );

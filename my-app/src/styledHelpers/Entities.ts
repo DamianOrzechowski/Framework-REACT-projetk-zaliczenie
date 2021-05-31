@@ -6,7 +6,24 @@ background-color:white;
 border-radius:10px;
 margin-bottom: 10px;;
 min-height: 100vh;
+.fullscreen{
+    width: 100vw;
+    background-color: white;
+    z-index: auto;
+    margin-left: -490px;
+    margin-top: -90px;
+    .Box{
+        
+        
 
+width: 90vw;
+display: flex;
+justify-content: center;
+//height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);}
+}
 .TopNav{
     margin-top: 20px;
     margin-left: 20px;
