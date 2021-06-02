@@ -6,11 +6,13 @@ import {Wrapper , TopSection ,Comments} from '../../styledHelpers/CommentsSectio
 import { useSelector } from 'react-redux';
 import { IState } from '../../reducers';
 import { ICommentsReducer } from '../../reducers/commentsReducers';
+import {IUsersReducer} from '../../reducers/usersReducers'
 
 export const CommentsSection: FC =()=>{
     const [wrapperRef, dropdownOpen, toggleDropdown]=useDropdown();
 
     const { commentsList } = useSelector<IState, ICommentsReducer>(globalState => globalState.comments);
+    const { usersList } = useSelector<IState, IUsersReducer>(globalState => globalState.users);
     let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body}])
     //setCommentsTable([])
 
@@ -69,6 +71,15 @@ export const CommentsSection: FC =()=>{
                     <div>
                         <p className='name'>{comment.name}</p>
                         <p className='body'>{comment.body}</p>
+                        <div className='bottomcomment'>
+                            <img src="media/publications.svg"/>
+                            <p>Subsid. Corp.</p>
+
+                            <img src="media/publications.svg"/>
+                            <p>Corporate</p>
+
+                            <p>Upadted 3 days ago by {usersList?.[0]?.name}</p>
+                        </div>
                     </div>
                 ))}
 

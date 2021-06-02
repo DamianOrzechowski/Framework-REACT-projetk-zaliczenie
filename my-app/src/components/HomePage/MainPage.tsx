@@ -11,6 +11,7 @@ import{Entities} from '../Entities/Entities';
 import{Main} from'../Main/Main';
 import{Test} from'../Test/Test';
 import{Profile} from '../Profile/Profile';
+import{Workspaces}from '../Workspaces/Workspaces';
 
 import { useDispatch } from 'react-redux';
 import { getUsers } from '../../actions/usersActions';
@@ -66,6 +67,9 @@ const MainPage: FC =() => {
                 </Route>
                 <Route path="/Profile">
                 <Profile />
+                </Route>
+                <Route path="/Workspaces">
+                <Workspaces />
                 </Route>
                 
 

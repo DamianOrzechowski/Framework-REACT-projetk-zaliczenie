@@ -7,11 +7,13 @@ border-radius:10px;
 margin-bottom: 10px;;
 min-height: 100vh;
 .fullscreen{
+    
     width: 100vw;
     background-color: white;
     z-index: auto;
     margin-left: -490px;
     margin-top: -90px;
+    min-height: 150vh;
     .Box{
         
         

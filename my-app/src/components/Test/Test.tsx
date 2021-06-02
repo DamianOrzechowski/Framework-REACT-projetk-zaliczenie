@@ -1,146 +1,70 @@
 import {useState, FC, useEffect} from 'react';
 import React from 'react';
-
+import { useSelector } from 'react-redux';
+import { IState } from '../../reducers';
+import { ICommentsReducer } from '../../reducers/commentsReducers';
+import ReactPaginate from "react-paginate";
 
 
 
 export const Test: FC =()=>{
  
-  const[counter,setCounter] = React.useState(0);
-  const[letters,setLetter] = React.useState<string>('a');
-  
-   const addcos = () =>{
-      setCounter(counter +1)
-   }
-   function addletter() {
-
-      setLetter(letters + 'a')
-   }
-   
-   let [name, setName] = useState('podaj imie');
-   let [isEdit, showEdit] = useState(false);
-   function Edytuj(){
-      if (isEdit ==false){
-         showEdit(true)
+   /*const { commentsList } = useSelector<IState, ICommentsReducer>(globalState => globalState.comments);
+   let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body}])
+   for (let index = 1; index < commentsList.length; index++) {
+      if(commentsTable.length < 500){
+      let commentname:string = commentsList?.[index]?.name;
+      let commentbody:string = commentsList?.[index]?.body;
+      commentsTable.push({name:commentname,body:commentbody})
       }
-      else{
-         showEdit(false)
-      }
-
-   }
-   function kopiuj(){
-      navigator.clipboard.writeText('http://localhost:3000/Entities')
-
-   }
-
-  // ()=>{showEdit(isEdit == false? isEdit=true:isEdit=false)}
-  /*const sortbyname = (tablica){
-
   }*/
-  
+ 
+  //console.log(commentsTable)
 
-  
+  const [comments, setComments] = useState(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].slice(0,10));
+  const [pageNumber, setPageNumber] = useState(0);
+  const[prwada,setprawda]=useState(true);
+  const usersPerPage = 2;
+  const pagesVisited = pageNumber * usersPerPage;
+
+  const displayUsers = comments
+    .slice(pagesVisited, pagesVisited + usersPerPage)
+    .map((comment) => {
+      return (
+        <div className="user">
+          <h3>{comment}</h3>
+          
+        </div>
+      );
+    });
+
+    const pageCount:number = Math.ceil(comments.length / usersPerPage);
+
+  const changePage = (selected:any) => {
+    setPageNumber(selected);
+  };
+  console.log()
 
 
-
-
-
-
-
-  
-  const [data, setData] = useState([{name:'Zenek',color:'red'},{name:'Katarzyna',color:'blue'},{name:'Aneta',color:'orange'}]);
-  const [spr, setSpr] = useState(true)
-  //console.log(data)
-
-  //const [data, setData] = useState([{name:'Zenek'},{name:'Katarzyna'},{name:'Aneta'}]);
-
-//let spr:boolean = true;
-function zmiana(){
-   if(spr===true){
-   //alfabetyczne
-   //console.log(listaosob.sort((a,b) => 0 - (a > b ? -1 : 1)));
-   setSpr(false)
-   setData(data.sort((a,b) => 0 - (a > b ? -1 : 1)))
-   console.log(data)
-   
-console.log(spr)}
-   
-
-   else{
-      setSpr(true)
-      //nie alfabetyczne
-      //console.log(listaosob.sort((a,b) => 0 - (a > b ? 1 : -1)));
-      setData(data.sort((a,b) => 0 - (a > b ? 1 : -1)))
-      console.log(data)
-      
-      console.log(spr)
-   }
-   
-      
-  
-}
-//console.log(listaosob.sort())
 
    return(
-    <div >
-       <button onClick={zmiana}>zmiana na alfabetycznie</button>
-       {spr ===true?(
-          <div>
-               {data.map(lista =>(
-                <p style={{color: lista.color}}>{lista.name}</p>
-               
-             ))}
-
-          </div>
-
-       ):(
-          <div>
-             
-             {data.map(lista =>(
-                <p style={{color: lista.color}}>{lista.name}</p>
-             ))}
-             
-             
-          </div>
-
-       )}
+      <div >
+       {displayUsers}
+      <ReactPaginate
+        previousLabel={"Previous"}
+        nextLabel={"Next"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+        pageRangeDisplayed={usersPerPage}
+        marginPagesDisplayed={10}
+      />
        
-       
-
-
-
-
-
-
-
-
-
-
-
-
-   <p onClick={addcos}> liczba{counter}</p>
-   <p onClick={addletter}> {letters}</p>
-   <input type="date" />
-   <br />
-   <button onClick={kopiuj}>zmień </button>
-
-   
-   
-   
-   {isEdit==false?
-   (
-
-   <p>{name}</p>
-   ):(
-<input type = 'text' placeholder ='wybierz imie' onChange={event => setName(event.target.value)}/>
-   )
-
-   }
-   
-   
-
-
-  </div>
+      </div>
    );
 
 

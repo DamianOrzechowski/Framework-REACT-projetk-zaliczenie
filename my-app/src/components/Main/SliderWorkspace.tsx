@@ -44,7 +44,7 @@ export const SliderWorkspace: FC =()=>{
            </Wrapper>
            </Link>
 
-           <Link to="/Test">
+           <Link to="/Workspaces">
            <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
