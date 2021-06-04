@@ -9,7 +9,7 @@ import { TopBar } from '../TopBar/TopBar';
 import { LeftMenu } from '../LeftMenu/LeftMenu';
 import{Entities} from '../Entities/Entities';
 import{Main} from'../Main/Main';
-import{Test} from'../Test/Test';
+import CustomPaginationActionsTable from'../Test/Test';
 import{Profile} from '../Profile/Profile';
 import{Workspaces}from '../Workspaces/Workspaces';
 
@@ -59,7 +59,7 @@ const MainPage: FC =() => {
                 <LeftMenu />
                  <Switch>
                  <Route path="/Test">
-                <Test />
+                <CustomPaginationActionsTable />
                 </Route>
 
                 <Route path="/Entities">
@@ -68,7 +68,7 @@ const MainPage: FC =() => {
                 <Route path="/Profile">
                 <Profile />
                 </Route>
-                <Route path="/Workspaces">
+                <Route path="/Workspaces/:title">
                 <Workspaces />
                 </Route>
                 

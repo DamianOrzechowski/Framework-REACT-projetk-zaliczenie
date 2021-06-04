@@ -4,7 +4,19 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import {SliderWrapper,Wrapper,Tile} from '../../styledHelpers/SliderWrapper'
+import { useState } from 'react';
+import {useHistory} from 'react-router'
+
 export const SliderWorkspace: FC =()=>{
+  /*const [data,setData] = useState('kot')
+  const history = useHistory()
+  function Zmien() {
+    setData('Supplier contract')
+    const location = {
+      pathname:`/WorkSpaces/${data}`
+    }
+    history.push(location)
+  }*/
 
     var settings = {
         dots: true,
@@ -44,7 +56,7 @@ export const SliderWorkspace: FC =()=>{
            </Wrapper>
            </Link>
 
-           <Link to="/Workspaces">
+           <Link to="/Workspaces/SuppilerContract" >
            <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
