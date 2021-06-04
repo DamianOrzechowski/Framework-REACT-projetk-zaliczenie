@@ -35,7 +35,7 @@ export const ExpandedMenu: FC = () => {
             {"Home".toLowerCase().includes(inputText.toLowerCase()) &&
                 <Link to="/">
                 <LiExpandedMenu>
-                <li><img src="media/house2.svg"/><p>Home</p></li>
+                <li><img src="/media/house2.svg"/><p>Home</p></li>
                 </LiExpandedMenu>
                 </Link>
             }
@@ -43,7 +43,7 @@ export const ExpandedMenu: FC = () => {
             {"Publications".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/publications.svg"/><p>Publications</p></li>
+            <li><img src="/media/publications.svg"/><p>Publications</p></li>
             </LiExpandedMenu>
             </Link>
             }
@@ -51,7 +51,7 @@ export const ExpandedMenu: FC = () => {
             {"People".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/people.svg"/><p>People</p></li>
+            <li><img src="/media/people.svg"/><p>People</p></li>
             </LiExpandedMenu>
             </Link>
             }
@@ -59,7 +59,7 @@ export const ExpandedMenu: FC = () => {
             {"Entities".toLowerCase().includes(inputText.toLowerCase()) &&
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/entities2.svg"/><p>Entities</p></li>
+            <li><img src="/media/entities2.svg"/><p>Entities</p></li>
             </LiExpandedMenu>
             </Link>
             }
@@ -67,7 +67,7 @@ export const ExpandedMenu: FC = () => {
             {"Administration".toLowerCase().includes(inputText.toLowerCase()) &&   
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/administration.svg"/><p>Administration</p></li>
+            <li><img src="/media/administration.svg"/><p>Administration</p></li>
             </LiExpandedMenu>
             </Link>
             }
@@ -77,81 +77,81 @@ export const ExpandedMenu: FC = () => {
             <ScrollBar>
 
             {"client contract".toLowerCase().includes(inputText.toLowerCase()) && 
-            <Link to="/">
+            <Link to='/Workspaces/Client contract/sticky-note-regular.svg'>
             <LiExpandedMenu>
-            <li><img src="media/sticky-note-regular.svg"/><p>Client contract</p></li>
+            <li><img src="/media/sticky-note-regular.svg"/><p>Client contract</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
             {"Supplier contract".toLowerCase().includes(inputText.toLowerCase()) && 
-            <Link to="/">
+            <Link to="/Workspaces/Suppiler Contract/book-solid.svg">
             <LiExpandedMenu>
-            <li><img src="media/book-solid.svg"/><p>Supplier contract</p></li>
+            <li><img src="/media/book-solid.svg"/><p>Supplier contract</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
             {"Corporate".toLowerCase().includes(inputText.toLowerCase()) && 
-            <Link to="/">
+            <Link to="/Workspaces/Corporate/sticky-note-regular.svg">
             <LiExpandedMenu>
-            <li><img src="media/sticky-note-regular.svg"/><p>Corporate</p></li>
+            <li><img src="/media/sticky-note-regular.svg"/><p>Corporate</p></li>
             </LiExpandedMenu>
             </Link>
             }
                    
             {"Group Norms".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Workspaces/Grup Norms/sticky-note-regular.svg">
             <LiExpandedMenu>
-            <li><img src="media/sticky-note-regular.svg"/><p>Group Norms</p></li>
+            <li><img src="/media/sticky-note-regular.svg"/><p>Group Norms</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
             {"Estate contracts".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Workspaces/Estate Contracts/house2.svg">
             <LiExpandedMenu>
-            <li><img src="media/house2.svg"/><p>Estate contracts</p></li>
+            <li><img src="/media/house2.svg"/><p>Estate contracts</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
             {"Commercial".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Workspaces/Commercial/book-solid.svg">
             <LiExpandedMenu>
-            <li><img src="media/book-solid.svg"/><p>Commercial</p></li>
+            <li><img src="/media/book-solid.svg"/><p>Commercial</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
             {"Shops".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Workspaces/Shops/arrow-down.svg">
             <LiExpandedMenu>
-            <li><img src="media/arrow-down.svg"/><p>Shops</p></li>
+            <li><img src="/media/arrow-down.svg"/><p>Shops</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
             {"Business".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Workspaces/Buissnes/entities.svg">
             <LiExpandedMenu>
-            <li><img src="media/entities.svg"/><p>Business</p></li>
+            <li><img src="/media/entities.svg"/><p>Business</p></li>
             </LiExpandedMenu>
             </Link>
              }
 
             {"Manager".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Workspaces/Manager/people.svg">
             <LiExpandedMenu>
-            <li><img src="media/people.svg"/><p>Manager</p></li>
+            <li><img src="/media/people.svg"/><p>Manager</p></li>
             </LiExpandedMenu>
             </Link>
             }
 
             {"Online".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Workspaces/Online/sticky-note-regular.svg">
             <LiExpandedMenu>
-            <li><img src="media/sticky-note-regular.svg"/><p>Online</p></li>
+            <li><img src="/media/sticky-note-regular.svg"/><p>Online</p></li>
             </LiExpandedMenu>
             </Link>
             }
@@ -169,17 +169,17 @@ export const ExpandedMenu: FC = () => {
             </Link>
             <Link to="/">
             <LiExpandedMenu>
-            <li><img src="media/privacy.svg"/><p>Privacy</p></li>
+            <li><img src="/media/privacy.svg"/><p>Privacy</p></li>
             </LiExpandedMenu>
             </Link>
             <Link to="/">
             <LiExpandedMenu>
-            <li id="Settings"><img src="media/settings.svg"/><p>Settings</p></li>
+            <li id="Settings"><img src="/media/settings.svg"/><p>Settings</p></li>
             </LiExpandedMenu>
             </Link>
             <Link to="/">
                 <Logout>
-            <li><img src="media/logout.svg"/><p>Logout</p></li> 
+            <li><img src="/media/logout.svg"/><p>Logout</p></li> 
             </Logout> 
             </Link>
             </ul>

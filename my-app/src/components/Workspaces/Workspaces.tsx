@@ -11,15 +11,9 @@ export const Workspaces: FC =()=>{
  
    return(
        <PageWorkspaces>
-          
-          
-          
           <Header/>
           <Banner/>
           <Comments/>
-          
-          
-           
         </PageWorkspaces>
    );
 };

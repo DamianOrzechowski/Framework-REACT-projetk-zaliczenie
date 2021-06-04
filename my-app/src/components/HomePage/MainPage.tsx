@@ -68,7 +68,7 @@ const MainPage: FC =() => {
                 <Route path="/Profile">
                 <Profile />
                 </Route>
-                <Route path="/Workspaces/:title">
+                <Route path="/Workspaces/:title/:img">
                 <Workspaces />
                 </Route>
                 

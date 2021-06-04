@@ -62,6 +62,7 @@ border-radius: 10px;
 }
 .HeaderBottomPic{
     width: 50px;
+    height: 50px;
     padding: 30px 20px;
 }
 

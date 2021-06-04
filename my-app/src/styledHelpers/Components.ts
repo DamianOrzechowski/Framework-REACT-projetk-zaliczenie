@@ -225,7 +225,7 @@ display:flex;
     
     width:33%;
     height:275px;
-    background-image: url("media/fakeApi.png");
+    background-image: url("/media/fakeApi.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;

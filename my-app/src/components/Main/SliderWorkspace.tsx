@@ -4,8 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import {SliderWrapper,Wrapper,Tile} from '../../styledHelpers/SliderWrapper'
-import { useState } from 'react';
-import {useHistory} from 'react-router'
+
 
 export const SliderWorkspace: FC =()=>{
   /*const [data,setData] = useState('kot')
@@ -31,7 +30,7 @@ export const SliderWorkspace: FC =()=>{
          
            <Slider {...settings}>
 
-           <Link to="/Test">
+           <Link to='/Workspaces/Client contract/sticky-note-regular.svg'>
            <Wrapper>
             <Tile>
             
@@ -56,7 +55,7 @@ export const SliderWorkspace: FC =()=>{
            </Wrapper>
            </Link>
 
-           <Link to="/Workspaces/SuppilerContract" >
+           <Link to="/Workspaces/Suppiler Contract/book-solid.svg" >
            <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -79,7 +78,7 @@ export const SliderWorkspace: FC =()=>{
             </Wrapper>
             </Link>
 
-            <Link to="/Test">
+            <Link to="/Workspaces/Corporate/sticky-note-regular.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -103,7 +102,7 @@ export const SliderWorkspace: FC =()=>{
             </Link>
             
 
-            <Link to="/Test">
+            <Link to="/Workspaces/Grup Norms/sticky-note-regular.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -126,7 +125,7 @@ export const SliderWorkspace: FC =()=>{
             </Wrapper>
             </Link>
 
-            <Link to="/Test">
+            <Link to="/Workspaces/Estate Contracts/house2.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -149,7 +148,7 @@ export const SliderWorkspace: FC =()=>{
             </Wrapper>
             </Link>
 
-            <Link to="/Test">
+            <Link to="/Workspaces/Online/sticky-note-regular.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -172,7 +171,7 @@ export const SliderWorkspace: FC =()=>{
             </Wrapper>
             </Link>
 
-            <Link to="/Test">
+            <Link to="/Workspaces/Shops/arrow-down.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -195,7 +194,7 @@ export const SliderWorkspace: FC =()=>{
             </Wrapper>
             </Link>
 
-            <Link to="/Test">
+            <Link to="/Workspaces/Buissnes/entities.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -218,7 +217,7 @@ export const SliderWorkspace: FC =()=>{
             </Wrapper>
             </Link>
 
-            <Link to="/Test">
+            <Link to="/Workspaces/Commercial/book-solid.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
@@ -241,7 +240,7 @@ export const SliderWorkspace: FC =()=>{
             </Wrapper>
             </Link>
 
-            <Link to="/">
+            <Link to="/Workspaces/Manager/people.svg">
             <Wrapper>
             <Tile>
               <img className="background" src="media/contract2.jpg" />
