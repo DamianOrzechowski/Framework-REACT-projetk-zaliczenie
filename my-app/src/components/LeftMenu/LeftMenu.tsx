@@ -25,6 +25,9 @@ const Profile = styled.div`
 p{
     margin-top:5px;
     margin-bottom:10px;
+    color: black;
+    text-decoration:underline white;
+    
 }
 
 img{
@@ -43,6 +46,8 @@ border-bottom: 2px solid gray;
 `
 const YNetworkPublication = styled.div`
 background:white;
+color: black;
+text-decoration:underline white;
 
 `
 const YNetwork = styled.div`
@@ -107,7 +112,7 @@ margin-right:10px;
 `
 
 
-//<img src="./media/profile.jpg"/>
+
 
 export const LeftMenu: FC = () => {
 
@@ -117,14 +122,18 @@ export const LeftMenu: FC = () => {
     return (
         
         //karta z zdjęciem po lewej
-    <LefttMenu>    
+    <LefttMenu> 
+        
         <Card>
+        <Link to="/Profile">  
             <Profile>
             <img src={photosList[0]?.url}/>
                 <p >{usersList?.[0]?.name}</p>
                 <p id="job">job title</p>
 
             </Profile>
+            </Link>  
+            <Link to="/Test">
             <YNetworkPublication>
                 <YNetwork>
                     <img src="media/network.png"/>
@@ -138,8 +147,10 @@ export const LeftMenu: FC = () => {
                 </YPublication>
 
             </YNetworkPublication>
+            </Link>
 
         </Card>
+        
         <PuEcEn>
             <Link to="/Test">
             <El>
@@ -148,7 +159,7 @@ export const LeftMenu: FC = () => {
             </El>
             </Link>
             
-            <Link to="/">
+            <Link to="/Test">
             <El>
                 <img src="media/ecosystem.svg"/>
                 <p>Ecosystem</p>

@@ -22,44 +22,35 @@ export const CommentsSection: FC =()=>{
         let commentbody:string = commentsList?.[index]?.body;
         commentsTable.push({name:commentname,body:commentbody})
         }
-        //if(index ===499){setCommentsTable(commentsTable)}
-        //setCommentsTable(commentsTable) 
+        
     }
-    console.log(commentsTable)
+    
     const [searchTerm,setSerachTerm] = useState('')
+    const [follow,setFollow] = useState(true)
 
     return(
         <Wrapper>
             <TopSection>
                 <h2 className="title">Resume your work</h2>
-
                 <div className='rightsection'>
-
                     <div className='inputsection'>
-
                         <input type="text" placeholder='Filter by title...' onChange={event =>{setSerachTerm(event.target.value)}}/>
                         <img src="media/search.svg"/>
-
                     </div>
-
                     <div className='expandedsection'>
-
                         <img src="media/follow.png"/>
-                        <p>Followed</p>
+                        {follow===true?(<p>Followed</p>):(<p>My posts</p>)}
                         <img className='buttondown' onClick={toggleDropdown} src="media/arrow-down.svg" />
                         {dropdownOpen && 
                             <ul className='list'>
-                                <li>my posts</li>
+                                <li className='listli' onClick={()=>setFollow(false)}>My posts</li>
+                                <li className='listli'onClick={()=>setFollow(true)}>Followed</li>
                             </ul>
                         }
-
                     </div>
-
                 </div>
             </TopSection>
             <Comments>
-
-
                 {commentsTable.filter((val)=>{
                   if(searchTerm==''){
                       return val;
@@ -74,16 +65,12 @@ export const CommentsSection: FC =()=>{
                         <div className='bottomcomment'>
                             <img src="media/publications.svg"/>
                             <p>Subsid. Corp.</p>
-
                             <img src="media/publications.svg"/>
                             <p>Corporate</p>
-
                             <p>Upadted 3 days ago by {usersList?.[0]?.name}</p>
                         </div>
                     </div>
                 ))}
-
-
             </Comments>
 
         </Wrapper>

@@ -42,9 +42,15 @@ export const TopBar: FC = () => {
                 </InputWrapper>
             
                 <RightIcons>
-                <img src="media/house.svg"/>
+                <Link to="/">
+                <img src="/media/house.svg"/>
+                </Link>
+                <Link to="/Test">
                 <img id="border" src="media/comments.png"/>
+                </Link>
+                <Link to="/Test">
                 <img id="border"src="media/bell.svg"/>
+                </Link>
                 </RightIcons>
             </InnerWrapper>        
         </Wrapper>

@@ -65,6 +65,17 @@ input{
 .list{
     position:absolute;
     background-color:white;
+    margin-top: 80px;
+    background-color:#f1f1f1;
+    color: #063970;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .listli{
+        padding: 5px;
+    }
 }
 
 

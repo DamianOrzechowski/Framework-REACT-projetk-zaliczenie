@@ -33,7 +33,7 @@ export const ExpandedMenu: FC = () => {
             <li id="group">Platform</li>
 
             {"Home".toLowerCase().includes(inputText.toLowerCase()) &&
-                <Link to="/">
+                <Link to="/Test">
                 <LiExpandedMenu>
                 <li><img src="/media/house2.svg"/><p>Home</p></li>
                 </LiExpandedMenu>
@@ -41,7 +41,7 @@ export const ExpandedMenu: FC = () => {
             }
 
             {"Publications".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Test">
             <LiExpandedMenu>
             <li><img src="/media/publications.svg"/><p>Publications</p></li>
             </LiExpandedMenu>
@@ -49,7 +49,7 @@ export const ExpandedMenu: FC = () => {
             }
 
             {"People".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Test">
             <LiExpandedMenu>
             <li><img src="/media/people.svg"/><p>People</p></li>
             </LiExpandedMenu>
@@ -57,7 +57,7 @@ export const ExpandedMenu: FC = () => {
             }
               
             {"Entities".toLowerCase().includes(inputText.toLowerCase()) &&
-            <Link to="/">
+            <Link to="/Test">
             <LiExpandedMenu>
             <li><img src="/media/entities2.svg"/><p>Entities</p></li>
             </LiExpandedMenu>
@@ -65,7 +65,7 @@ export const ExpandedMenu: FC = () => {
             }
 
             {"Administration".toLowerCase().includes(inputText.toLowerCase()) &&   
-            <Link to="/">
+            <Link to="/Test">
             <LiExpandedMenu>
             <li><img src="/media/administration.svg"/><p>Administration</p></li>
             </LiExpandedMenu>
@@ -167,17 +167,17 @@ export const ExpandedMenu: FC = () => {
             </li>
             </Account>
             </Link>
-            <Link to="/">
+            <Link to="/Test">
             <LiExpandedMenu>
             <li><img src="/media/privacy.svg"/><p>Privacy</p></li>
             </LiExpandedMenu>
             </Link>
-            <Link to="/">
+            <Link to="/Test">
             <LiExpandedMenu>
             <li id="Settings"><img src="/media/settings.svg"/><p>Settings</p></li>
             </LiExpandedMenu>
             </Link>
-            <Link to="/">
+            <Link to="/Test">
                 <Logout>
             <li><img src="/media/logout.svg"/><p>Logout</p></li> 
             </Logout> 
