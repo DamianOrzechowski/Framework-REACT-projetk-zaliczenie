@@ -62,30 +62,52 @@ input{
     }
    
 }
-.list{
-    position:absolute;
-    background-color:white;
-    margin-top: 80px;
-    background-color:#f1f1f1;
-    color: #063970;
-    width: 125px;
-    display: flex;
-    flex-direction: column;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    .listli{
-        padding: 5px;
-    }
-}
+
 
 
 `;
 export const Comments = styled.div`
-.name{
-    background-color: aqua;
-}
-.body{
-    background-color: aquamarine;
-}
+display: flex;
+flex-direction: column;
+align-items: center;
 
+`;
+export const Comment = styled.div`
+margin-top: 10px;
+margin-bottom:10px ;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 2px -2px gray;
+width: 100%;
+img{
+    width: 10px;
+    border-radius: 10px;
+}
+.commentTitle{
+    color: #2e439f;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+.commentBody{
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 600px;
+}
+.bottomText{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    
+    img{
+        height: 10px;
+        margin-right: 10px;
+    }
+    p{
+        margin-right: 10px;
+        color: #8b909e;
+    }
+}
 `;

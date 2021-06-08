@@ -24,9 +24,9 @@ type GetComments = ReturnType<typeof getComments>
 type GetPosts = ReturnType<typeof getPosts>
 
 const Wrapper = styled.div`
- background:#f1f1f1;
+ background-color:#f1f1f1;
  font-family: 'Roboto', sans-serif;
- //height:100vh;
+ height:2200px;
 
 `;
 

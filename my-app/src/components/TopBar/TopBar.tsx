@@ -16,17 +16,17 @@ export const TopBar: FC = () => {
             <InnerWrapper>
                 <ExpandedMenuWrapper>
                 <Link to="/">
-                <img src="media/logo.png"/>
+                <img src="/media/logo.png"/>
                 </Link>
                 </ExpandedMenuWrapper>
 
                 <Menu ref={wrapperRef}>
                 <Link to="/">
-                <img src="media/house2.svg" />
+                <img src="/media/house2.svg" />
                 </Link>
                 <p>Home</p>
                 
-                <img onClick={toggleDropdown} src="media/arrow-down.svg" />
+                <img onClick={toggleDropdown} src="/media/arrow-down.svg" />
                 {dropdownOpen && 
                     
                    <ExpandedMenu/>
@@ -38,7 +38,7 @@ export const TopBar: FC = () => {
                 
                 <InputWrapper>
                 <input type="text" placeholder='Search Legalcluster'/>
-                <img src="media/search.svg"/>
+                <img src="/media/search.svg"/>
                 </InputWrapper>
             
                 <RightIcons>
@@ -46,10 +46,10 @@ export const TopBar: FC = () => {
                 <img src="/media/house.svg"/>
                 </Link>
                 <Link to="/Test">
-                <img id="border" src="media/comments.png"/>
+                <img id="border" src="/media/comments.png"/>
                 </Link>
                 <Link to="/Test">
-                <img id="border"src="media/bell.svg"/>
+                <img id="border"src="/media/bell.svg"/>
                 </Link>
                 </RightIcons>
             </InnerWrapper>        

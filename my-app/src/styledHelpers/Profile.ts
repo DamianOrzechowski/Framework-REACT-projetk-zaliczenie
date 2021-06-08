@@ -4,6 +4,12 @@ export const Page = styled.div`
 width: 785px;
 background-color:white;
 border-radius:10px;
+min-height: 100vh;
+
+h1{
+    margin-top: 20px;
+    margin-left: 20px;
+}
 
 `;
 //Section1

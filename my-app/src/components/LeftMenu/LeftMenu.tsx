@@ -106,8 +106,7 @@ text-decoration:underline #f1f1f1;
 `
 //Menu
 const LefttMenu = styled.div`
-//margin-left:10px;
-//margin-top:10px;
+
 margin-right:10px;
 `
 
@@ -121,7 +120,7 @@ export const LeftMenu: FC = () => {
 
     return (
         
-        //karta z zdjęciem po lewej
+        
     <LefttMenu> 
         
         <Card>
@@ -136,14 +135,14 @@ export const LeftMenu: FC = () => {
             <Link to="/Test">
             <YNetworkPublication>
                 <YNetwork>
-                    <img src="media/network.png"/>
+                    <img src="/media/network.png"/>
                     <p>Your Network</p>
-                    <img src="media/network.svg"/>
+                    <img src="/media/network.svg"/>
                 </YNetwork>
                 <YPublication>
-                    <img src="media/publications.svg"/>
+                    <img src="/media/publications.svg"/>
                     <p>Your Publications</p>
-                    <img src="media/plus.svg"/>
+                    <img src="/media/plus.svg"/>
                 </YPublication>
 
             </YNetworkPublication>
@@ -154,14 +153,14 @@ export const LeftMenu: FC = () => {
         <PuEcEn>
             <Link to="/Test">
             <El>
-                <img src="media/publications.svg"/>
+                <img src="/media/publications.svg"/>
                 <p>Publications</p>
             </El>
             </Link>
             
             <Link to="/Test">
             <El>
-                <img src="media/ecosystem.svg"/>
+                <img src="/media/ecosystem.svg"/>
                 <p>Ecosystem</p>
             </El>
             </Link>
@@ -170,7 +169,7 @@ export const LeftMenu: FC = () => {
             
             <Link to="/Entities">
             <El>
-                <img src="media/entities2.svg"/>
+                <img src="/media/entities2.svg"/>
                 <p>Entities</p>
             </El>
             </Link>

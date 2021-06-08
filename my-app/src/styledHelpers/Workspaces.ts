@@ -236,10 +236,48 @@ background-color: #e8e8e8;
 background-color: white;
 }
 `;
-export const Commentss = styled.div`
+export const Comment = styled.div`
+margin-top: 10px;
+margin-bottom:10px ;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 2px -2px gray;
+width: 100%;
 img{
     width: 10px;
+    border-radius: 10px;
+}
+.commentTitle{
+    color: #2e439f;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+.commentBody{
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 600px;
+}
+.bottomText{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    
+    img{
+        height: 10px;
+        margin-right: 10px;
+    }
+    p{
+        margin-right: 10px;
+        color: #8b909e;
+    }
 }
 
 `;
-export const CommentsWrapper = styled.div``;
+export const CommentsSection = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+`;

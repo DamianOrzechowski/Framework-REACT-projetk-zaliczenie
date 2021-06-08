@@ -1,7 +1,7 @@
 import {FC,useState} from 'react';
 import { WrapperComments} from '../../styledHelpers/Workspaces'
 import useDropdown from 'react-dropdown-hook';
-import {TopSection,BottomSection,Commentss ,CommentsWrapper } from '../../styledHelpers/Workspaces'
+import {TopSection,BottomSection,Comment ,CommentsSection} from '../../styledHelpers/Workspaces'
 //comments
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Pagination from '@material-ui/lab/Pagination';
@@ -13,16 +13,7 @@ import { IPostsReducer } from '../../reducers/postsReducers';
 import { IPhotosReducer } from '../../reducers/photosReducers';
 import { useSelector } from 'react-redux';
 
-const useStyles = makeStyles((theme) =>
 
-  createStyles({
-    root: {
-      '& > *': {
-        marginTop: theme.spacing(2),
-      },
-    },
-  }),
-);
 
 export const Comments: FC =()=>{
     const [wrapperRef, dropdownOpen, toggleDropdown]=useDropdown();
@@ -39,9 +30,20 @@ export const Comments: FC =()=>{
  
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => setCurrentPage(value);
   let [currentPage,setCurrentPage] = useState(1)
-  let [itemsPerPage,setItemsPerPage] = useState(20)
+  let [itemsPerPage,setItemsPerPage] = useState(10)
   const indexOfLastItem = currentPage*itemsPerPage;
   const indexOfFirstItem = indexOfLastItem-itemsPerPage;
+
+  let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body,user:usersList?.[0]?.name,}])
+  for (let index = 1; index < commentsList.length; index++) {
+    if(commentsTable.length < 500){
+    let commentname = commentsList?.[index]?.name;
+    let commentbody = commentsList?.[index]?.body;
+    let commentuser = usersList?.[0]?.name;
+
+    commentsTable.push({name:commentname,body:commentbody,user:commentuser})
+    } 
+}
     
     return(
         <WrapperComments>
@@ -76,32 +78,33 @@ export const Comments: FC =()=>{
                 <div className='white'><img src="/media/checklist.svg"/><p>Survey</p></div>
                 <div className='white'><p>...</p></div>
             </BottomSection>
-            <CommentsWrapper>
-            {commentsList.filter((val)=>{
+            <CommentsSection>
+            {commentsTable.filter((val)=>{
                   if(searchTerm==''){
                       return val;
                   }else if(val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                       return val;
-
                   };
               }).slice(indexOfFirstItem,indexOfLastItem).map(comment => 
-                <Commentss>
-                    <div className = 'innerComment'>
+                <Comment>
                         <div className = 'commentTitle'>
-                            {comment.name}
+                        {comment.name}
                         </div>
+                        <div  className = 'commentBody'>
                         {comment.body}
-                        <div className = 'bottomText'>
-                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/>Subsid corp.
-                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/>Corporate
-                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/>Updated 7 days ago
                         </div>
-                    </div>
+                        <div className = 'bottomText'>
+                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/> 
+                            <p>Subsid corp.</p>
+                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/> 
+                            <p>Corporate</p>
+                            <p>Updated 3 days ago by {comment.user}</p>
+                        </div>
                     <br />
-                </Commentss>
+                </Comment>
                 )}
-            <Pagination count={25} page={currentPage} onChange={handleChange}/>
-            </CommentsWrapper>
+            <Pagination count={50} page={currentPage} onChange={handleChange}/>
+            </CommentsSection>
 
         </WrapperComments>
         
