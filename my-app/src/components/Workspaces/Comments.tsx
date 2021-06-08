@@ -1,12 +1,48 @@
 import {FC,useState} from 'react';
 import { WrapperComments} from '../../styledHelpers/Workspaces'
 import useDropdown from 'react-dropdown-hook';
-import {TopSection,BottomSection } from '../../styledHelpers/Workspaces'
+import {TopSection,BottomSection,Commentss ,CommentsWrapper } from '../../styledHelpers/Workspaces'
+//comments
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+import Pagination from '@material-ui/lab/Pagination';
+
+import { IState } from '../../reducers';
+import { ICommentsReducer } from '../../reducers/commentsReducers';
+import {IUsersReducer} from '../../reducers/usersReducers'
+import { IPostsReducer } from '../../reducers/postsReducers';
+import { IPhotosReducer } from '../../reducers/photosReducers';
+import { useSelector } from 'react-redux';
+
+const useStyles = makeStyles((theme) =>
+
+  createStyles({
+    root: {
+      '& > *': {
+        marginTop: theme.spacing(2),
+      },
+    },
+  }),
+);
 
 export const Comments: FC =()=>{
     const [wrapperRef, dropdownOpen, toggleDropdown]=useDropdown();
     const [searchTerm,setSerachTerm] = useState('')
     const [follow,setFollow] = useState(true)
+    //coments
+    const { usersList } = useSelector<IState, IUsersReducer>(globalState => globalState.users);
+  const { commentsList } = useSelector<IState, ICommentsReducer>(globalState => globalState.comments);
+  const { postsList } = useSelector<IState, IPostsReducer>(globalState => globalState.posts);
+  const { photosList } = useSelector<IState, IPhotosReducer>(globalState => globalState.photos);
+    
+    
+    
+ 
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => setCurrentPage(value);
+  let [currentPage,setCurrentPage] = useState(1)
+  let [itemsPerPage,setItemsPerPage] = useState(20)
+  const indexOfLastItem = currentPage*itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem-itemsPerPage;
+    
     return(
         <WrapperComments>
             <TopSection>
@@ -40,6 +76,32 @@ export const Comments: FC =()=>{
                 <div className='white'><img src="/media/checklist.svg"/><p>Survey</p></div>
                 <div className='white'><p>...</p></div>
             </BottomSection>
+            <CommentsWrapper>
+            {commentsList.filter((val)=>{
+                  if(searchTerm==''){
+                      return val;
+                  }else if(val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                      return val;
+
+                  };
+              }).slice(indexOfFirstItem,indexOfLastItem).map(comment => 
+                <Commentss>
+                    <div className = 'innerComment'>
+                        <div className = 'commentTitle'>
+                            {comment.name}
+                        </div>
+                        {comment.body}
+                        <div className = 'bottomText'>
+                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/>Subsid corp.
+                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/>Corporate
+                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/>Updated 7 days ago
+                        </div>
+                    </div>
+                    <br />
+                </Commentss>
+                )}
+            <Pagination count={25} page={currentPage} onChange={handleChange}/>
+            </CommentsWrapper>
 
         </WrapperComments>
         

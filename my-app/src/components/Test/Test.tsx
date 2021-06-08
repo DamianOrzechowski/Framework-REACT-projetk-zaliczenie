@@ -34,20 +34,14 @@ export const Test: FC = () => {
     commentsTable.push({name:commentname,body:commentbody,user:commentuser})
     } 
 }
+
 console.log(commentsTable)
 
 const renderData = (commentsTable:any) => {
   return (
     <ul>
-      {commentsTable.filter((val:any)=>{
-                  if(searchTerm==''){
-                      return val;
-                  }else if(val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
-                      return val;
-
-                  };
-              }).map((comments:any) => {
-        return <li>{comments.name}  <div>{comments.user}</div></li>
+      {commentsTable.map((comments:any) => {
+        return <li>{comments.name}  <div>{comments.user}</div><br /> </li>
         ;
       })}
     </ul>
@@ -97,14 +91,9 @@ pages.push(i)
   const [searchTerm,setSerachTerm] = useState('')
   function serchtermfun(event:any) {
     setSerachTerm(event.target.value)
-    console.log(commentsTable.filter((val)=>{
-      if(searchTerm==''){
-          return val;
-      }else if(val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
-          return val;
-
-      };
-  }))
+    
+  
+    
     
     
   }

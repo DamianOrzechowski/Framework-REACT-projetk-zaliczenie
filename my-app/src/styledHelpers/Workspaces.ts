@@ -236,3 +236,10 @@ background-color: #e8e8e8;
 background-color: white;
 }
 `;
+export const Commentss = styled.div`
+img{
+    width: 10px;
+}
+
+`;
+export const CommentsWrapper = styled.div``;
