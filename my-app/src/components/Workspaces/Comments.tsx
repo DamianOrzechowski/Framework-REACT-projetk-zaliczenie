@@ -34,22 +34,17 @@ export const Comments: FC =()=>{
   const indexOfLastItem = currentPage*itemsPerPage;
   const indexOfFirstItem = indexOfLastItem-itemsPerPage;
 
-  var userSelector=0;
+  let [postsTable,setPostsTable] = useState([{title:postsList?.[0]?.title,body:postsList?.[0]?.body,user:usersList?.[0]?.name,userid:postsList?.[0]?.userId}])
+  for (let index = 1; index < postsList.length; index++) {
+    if(postsTable.length < 100){
+    let postTitle = postsList?.[index]?.title;
+    let postBody = postsList?.[index]?.body;
+    
+    let postUserId = postsList?.[index]?.userId;
 
-  let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body,user:usersList?.[0]?.name,}])
-  for (let index = 1; index < commentsList.length; index++) {
-    if(commentsTable.length < 500){
-        if(userSelector<9){
-            userSelector++
-          }
-          else{
-            userSelector=0;
-          }
-    let commentname = commentsList?.[index]?.name;
-    let commentbody = commentsList?.[index]?.body;
-    let commentuser = usersList?.[userSelector]?.name;
+    let postuser = usersList?.[postUserId-1]?.name;
 
-    commentsTable.push({name:commentname,body:commentbody,user:commentuser})
+    postsTable.push({title:postTitle,body:postBody,user:postuser,userid:postUserId})
     } 
 }
     
@@ -87,10 +82,10 @@ export const Comments: FC =()=>{
                 <div className='white'><p>...</p></div>
             </BottomSection>
             <CommentsSection>
-            {commentsTable.filter((val)=>{
+            {postsTable.filter((val)=>{
                   if(searchTerm==''){
                       return val;
-                  }else if(val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                  }else if(val.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                       return val;
                   };
               }).filter((value)=>{
@@ -100,25 +95,23 @@ export const Comments: FC =()=>{
                 else if(value.user.toLowerCase()===('Leanne Graham').toLowerCase()){
                   return value
                 }
-              }).slice(indexOfFirstItem,indexOfLastItem).map(comment => 
+              }).slice(indexOfFirstItem,indexOfLastItem).map(post => 
                 <Comment>
                         <div className = 'commentTitle'>
-                        {comment.name}
+                        {post.title}
                         </div>
                         <div  className = 'commentBody'>
-                        {comment.body}
+                        {post.body}
                         </div>
                         <div className = 'bottomText'>
                             <img src = {photosList[3]?.url} alt = '' className = 'photo'/> 
-                            <p>Subsid corp.</p>
-                            <img src = {photosList[3]?.url} alt = '' className = 'photo'/> 
-                            <p>Corporate</p>
-                            <p>Updated 3 days ago by {comment.user}</p>
+                            <p>SAS</p>
+                            <p>Updated 3 days ago by {post.user}</p>
                         </div>
                     <br />
                 </Comment>
                 )}
-            <Pagination count={50} page={currentPage} onChange={handleChange}/>
+            <Pagination count={10} page={currentPage} onChange={handleChange}/>
             </CommentsSection>
 
         </WrapperComments>

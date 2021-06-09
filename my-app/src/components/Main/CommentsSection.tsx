@@ -28,19 +28,47 @@ export const CommentsSection: FC =()=>{
 
   var userSelector=0;
 
-  let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body,user:usersList?.[0]?.name,}])
+  let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body,user:usersList?.[0]?.name,postid:commentsList?.[0]?.postId}])
   for (let index = 1; index < commentsList.length; index++) {
     if(commentsTable.length < 500){
-        if(userSelector<9){
-            userSelector++
+        let commentidpost = commentsList?.[index]?.postId;
+        if(commentidpost<=10){
+            userSelector =0;
+          }
+          else if(commentidpost<=20){
+            userSelector=1;
+          }
+          else if(commentidpost<=30){
+            userSelector=2;
+          }
+          else if(commentidpost<=40){
+            userSelector=3;
+          }
+          else if(commentidpost<=50){
+            userSelector=4;
+          }
+          else if(commentidpost<=60){
+            userSelector=5;
+          }
+          else if(commentidpost<=70){
+            userSelector=6;
+          }
+          else if(commentidpost<=80){
+            userSelector=7;
+          }
+          else if(commentidpost<=90){
+            userSelector=8;
           }
           else{
-            userSelector=0;
+              userSelector=9;
           }
+
+
     let commentname = commentsList?.[index]?.name;
     let commentbody = commentsList?.[index]?.body;
     let commentuser = usersList?.[userSelector]?.name;
-    commentsTable.push({name:commentname,body:commentbody,user:commentuser})
+    
+    commentsTable.push({name:commentname,body:commentbody,user:commentuser,postid:commentidpost})
     } 
 }
 

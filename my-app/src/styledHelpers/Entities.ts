@@ -11,8 +11,9 @@ min-height: 100vh;
     width: 100vw;
     background-color: white;
     z-index: auto;
-    margin-left: -490px;
-    margin-top: -90px;
+    position:absolute;
+    left:0;
+        top:0;
     min-height: 150vh;
     .Box{
         
