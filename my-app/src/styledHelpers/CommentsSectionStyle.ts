@@ -13,7 +13,24 @@ height: 200px;
 export const TopSection = styled.div`
 display:flex;
 justify-content:space-between;
-
+.list{
+    position:absolute;
+    background-color:white;
+    margin-top: 80px;
+    background-color:#f1f1f1;
+    color: #063970;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 1px gray solid;
+    
+    //border-bottom: 1px gray solid;
+    .listli{
+        padding: 5px;
+    }
+}
 .title{
     font-size:20px;
     

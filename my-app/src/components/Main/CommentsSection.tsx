@@ -26,12 +26,20 @@ export const CommentsSection: FC =()=>{
   const indexOfLastItem = currentPage*itemsPerPage;
   const indexOfFirstItem = indexOfLastItem-itemsPerPage;
 
+  var userSelector=0;
+
   let [commentsTable,setCommentsTable] = useState([{name:commentsList?.[0]?.name,body:commentsList?.[0]?.body,user:usersList?.[0]?.name,}])
   for (let index = 1; index < commentsList.length; index++) {
     if(commentsTable.length < 500){
+        if(userSelector<9){
+            userSelector++
+          }
+          else{
+            userSelector=0;
+          }
     let commentname = commentsList?.[index]?.name;
     let commentbody = commentsList?.[index]?.body;
-    let commentuser = usersList?.[0]?.name;
+    let commentuser = usersList?.[userSelector]?.name;
     commentsTable.push({name:commentname,body:commentbody,user:commentuser})
     } 
 }
@@ -65,6 +73,13 @@ export const CommentsSection: FC =()=>{
                   }else if(val.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                       return val;
                   };
+              }).filter((value)=>{
+                if(follow===true){
+                  return value
+                }
+                else if(value.user.toLowerCase()===('Leanne Graham').toLowerCase()){
+                  return value
+                }
               }).slice(indexOfFirstItem,indexOfLastItem).map(comment => 
                 <Comment>
                         <div className = 'commentTitle'>

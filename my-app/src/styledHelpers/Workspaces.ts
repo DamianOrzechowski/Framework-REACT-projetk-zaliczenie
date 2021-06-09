@@ -180,6 +180,7 @@ input{
     flex-direction: column;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-left: 1px gray solid;
     .listli{
         padding: 5px;
     }
